@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16C67" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--天气Nav-->
+        <scene sceneID="hBG-s2-OZp">
+            <objects>
+                <navigationController id="F28-R3-mcV" userLabel="天气Nav" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="n9j-H7-bLa">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="0Pc-sk-bRr" kind="relationship" relationship="rootViewController" id="YlR-UN-3FI"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Pdl-Jp-FeM" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-31" y="147"/>
+        </scene>
+        <!--天气-->
+        <scene sceneID="6sJ-zd-RG5">
+            <objects>
+                <viewController storyboardIdentifier="MY_WeatherViewController" id="0Pc-sk-bRr" userLabel="天气" customClass="MY_WeatherViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Hc0-N5-aPB"/>
+                        <viewControllerLayoutGuide type="bottom" id="3ac-Cz-c7o"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="7gG-U9-YPL">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="lCs-Ev-fKS"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="yDs-dq-3l2" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="590" y="146"/>
+        </scene>
+    </scenes>
+</document>

@@ -1,0 +1,113 @@
+//
+//  MY_Rebirth.pch
+//  MY_Rebirth
+//
+//  Created by ifly on 2017/2/15.
+//  Copyright © 2017年 Meiyang. All rights reserved.
+//
+
+#ifndef MY_Rebirth_pch
+#define MY_Rebirth_pch
+
+#ifdef __OBJC__
+
+#pragma mark ------------//第三方\\------------
+//网络
+#import "AFNetworking.h"
+//工具栏
+#import "CYLTabBarController.h"
+//键盘
+#import "IQKeyboardManager.h"
+//自适应
+#import "Masonry.h"
+//刷新
+#import "MBProgressHUD.h"
+//model数据解析
+#import "MJExtension.h"
+//图片
+#import <SDImageCache.h>
+#import "UIImageView+WebCache.h"
+//颜色管理
+#import <UIColor+Wonderful.h>
+#import <UILabel+Wonderful.h>
+//视频播放
+#import "ZFPlayer.h"
+//视频下载
+#import <ZFDownload/ZFDownloadManager.h>
+//引用别人
+#import "YXEasing.h"
+//动画
+#import <pop/POP.h>
+//GCD
+#import "GCD.h"
+
+
+
+#pragma mark ------------//类目名\\------------
+//字符处理
+#import "NSString+MY_NSString.h"
+//颜色图片
+#import "UIColor+MY_Color.h"
+//字体适应
+#import "UIFont+MY_Font.h"
+//屏幕大小
+#import "UIView+MY_SetRect.h"
+
+#pragma mark ------------//自建类名\\------------
+//网络
+#import "MYNetworkingManager.h"
+#import "MYNetWorkAPI.h"
+//通用
+#import "MY_GlobalManager.h"
+//启动页
+#import "MY_LaunchAdViewController.h"
+//工具栏
+#import "MY_BaseTabBarController.h"
+//广告页跳转
+#import "MY_AdWebViewController.h"
+//字体
+#import "AddedFont.h"
+//颜色
+#import "AppColor.h"
+
+#endif
+
+#pragma mark ------------//字体设置\\------------
+
+#pragma mark ------------//系统版本\\------------
+
+#pragma mark ------------//手机型号\\------------
+
+
+#pragma mark ------------//App设置\\------------
+//选中颜色
+#define MainSelectColor [UIColor colorWithRed:81/255.0 green:81/255.0 blue:81/255.0 alpha:1]
+//未选中颜色
+#define MainNormalColor [UIColor colorWithRed:219/255.0 green:219/255.0 blue:219/255.0 alpha:1]
+//tabBar.backgroundColor
+#define TabBarBackColor [UIColor colorWithRed:249/255.0 green:249/255.0 blue:249/255.0 alpha:1]
+
+
+#pragma mark ------------//通用属性\\------------
+//AppDelegate
+#define ShareApplicationDelegate [UIApplication sharedApplication].delegate
+//UIStoryboard
+#define UISTORYBOARD(name) [UIStoryboard storyboardWithName:name bundle:nil]
+//设备屏幕大小
+#define MAINSCREEN_WIDTH  [UIScreen mainScreen].bounds.size.width
+#define MAINSCREEN_HEIGHT [UIScreen mainScreen].bounds.size.height
+#define AutoSizeScaleX [UIScreen mainScreen].bounds.size.width / 375.0
+#define AutoSizeScaleY [UIScreen mainScreen].bounds.size.height / 667.0
+
+
+
+
+
+
+
+
+
+
+#endif /* MY_Rebirth_pch */
+
+

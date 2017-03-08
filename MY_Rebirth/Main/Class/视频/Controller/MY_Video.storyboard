@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16C67" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--视频Nav-->
+        <scene sceneID="LxE-k6-UYd">
+            <objects>
+                <navigationController id="58G-nu-sgO" userLabel="视频Nav" customClass="MY_BaseNavigationController" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="9Og-nG-hTn">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="gCw-RN-AcB" kind="relationship" relationship="rootViewController" id="Nd4-t7-6FE"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="xG9-DO-sBW" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-201" y="121"/>
+        </scene>
+        <!--视频-->
+        <scene sceneID="Gtb-pv-XI9">
+            <objects>
+                <viewController storyboardIdentifier="MY_VideoViewController" id="gCw-RN-AcB" userLabel="视频" customClass="MY_VideoViewController" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="mfs-kM-o3h">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <connections>
+                            <outlet property="dataSource" destination="gCw-RN-AcB" id="EXo-Gn-JeU"/>
+                            <outlet property="delegate" destination="gCw-RN-AcB" id="cS0-FW-dZd"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" id="qOg-hC-6TD"/>
+                    <connections>
+                        <outlet property="videoTableView" destination="mfs-kM-o3h" id="Ubq-uK-C9x"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="iDJ-pL-Xwj" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="446" y="121"/>
+        </scene>
+        <!--播放界面Nav-->
+        <scene sceneID="D5j-zF-wV1">
+            <objects>
+                <navigationController id="NUQ-Br-kDf" userLabel="播放界面Nav" customClass="MY_BaseNavigationController" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Xhs-nD-8i4">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="KGv-wc-PC7" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-202" y="770"/>
+        </scene>
+        <!--播放界面-->
+        <scene sceneID="1Uu-qm-NeD">
+            <objects>
+                <viewController storyboardIdentifier="MY_VideoDetailViewController" id="0YN-hJ-5XP" userLabel="播放界面" customClass="MY_VideoDetailViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="EEr-qh-7B6"/>
+                        <viewControllerLayoutGuide type="bottom" id="s4N-JG-MTu"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="SLs-4e-K19">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="V2v-ef-rVu" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="448" y="766"/>
+        </scene>
+    </scenes>
+</document>

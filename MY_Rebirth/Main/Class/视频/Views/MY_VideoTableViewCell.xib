@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11762" systemVersion="16C67" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" restorationIdentifier="MY_VideoTableViewCell" selectionStyle="default" indentationWidth="10" reuseIdentifier="MY_VideoTableViewCell" rowHeight="250" id="KGk-i7-Jjw" customClass="MY_VideoTableViewCell">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="250"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="375" height="249.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="IbE-yu-a1d" userLabel="视频图">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="250"/>
+                    </imageView>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BqA-Wa-12j" userLabel="模糊View">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="250"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VZ9-t5-E7A" userLabel="标题">
+                                <rect key="frame" x="0.0" y="80" width="375" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QH1-TP-j1O" userLabel="类型 时间">
+                                <rect key="frame" x="0.0" y="140" width="375" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="QH1-TP-j1O" firstAttribute="centerX" secondItem="BqA-Wa-12j" secondAttribute="centerX" id="1Ah-1e-fRi"/>
+                            <constraint firstAttribute="trailing" secondItem="QH1-TP-j1O" secondAttribute="trailing" id="3CS-3g-qSk"/>
+                            <constraint firstItem="QH1-TP-j1O" firstAttribute="leading" secondItem="BqA-Wa-12j" secondAttribute="leading" id="7te-CF-BcU"/>
+                            <constraint firstItem="QH1-TP-j1O" firstAttribute="height" secondItem="VZ9-t5-E7A" secondAttribute="height" id="Cpz-ok-0ii"/>
+                            <constraint firstItem="VZ9-t5-E7A" firstAttribute="centerX" secondItem="BqA-Wa-12j" secondAttribute="centerX" id="Ekn-L4-Ce9"/>
+                            <constraint firstItem="QH1-TP-j1O" firstAttribute="width" secondItem="VZ9-t5-E7A" secondAttribute="width" id="QMK-hW-p9y"/>
+                            <constraint firstAttribute="trailing" secondItem="VZ9-t5-E7A" secondAttribute="trailing" id="TaB-Ax-aub"/>
+                            <constraint firstItem="VZ9-t5-E7A" firstAttribute="top" secondItem="BqA-Wa-12j" secondAttribute="top" constant="80" id="U73-zd-e2L"/>
+                            <constraint firstItem="VZ9-t5-E7A" firstAttribute="leading" secondItem="BqA-Wa-12j" secondAttribute="leading" id="UUV-za-jwM"/>
+                            <constraint firstItem="VZ9-t5-E7A" firstAttribute="centerX" secondItem="BqA-Wa-12j" secondAttribute="centerX" id="hiT-YO-1AW"/>
+                            <constraint firstItem="QH1-TP-j1O" firstAttribute="centerX" secondItem="BqA-Wa-12j" secondAttribute="centerX" id="j6U-D9-2FL"/>
+                            <constraint firstItem="QH1-TP-j1O" firstAttribute="top" secondItem="VZ9-t5-E7A" secondAttribute="bottom" constant="30" id="j7j-rC-85F"/>
+                            <constraint firstAttribute="bottom" secondItem="QH1-TP-j1O" secondAttribute="bottom" constant="80" id="wFA-nC-bla"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="trailing" secondItem="BqA-Wa-12j" secondAttribute="trailing" id="0OE-pU-ztf"/>
+                    <constraint firstItem="IbE-yu-a1d" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="3QJ-5V-h3v"/>
+                    <constraint firstAttribute="trailing" secondItem="IbE-yu-a1d" secondAttribute="trailing" id="53x-6W-uJg"/>
+                    <constraint firstAttribute="bottom" secondItem="IbE-yu-a1d" secondAttribute="bottom" constant="-0.5" id="GqU-HP-hZb"/>
+                    <constraint firstItem="BqA-Wa-12j" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="JoC-en-ruX"/>
+                    <constraint firstItem="BqA-Wa-12j" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="aPz-Ct-0xF"/>
+                    <constraint firstItem="IbE-yu-a1d" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="f1m-BH-qaX"/>
+                    <constraint firstAttribute="bottom" secondItem="BqA-Wa-12j" secondAttribute="bottom" constant="-0.5" id="zB7-9h-YcV"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="videoImageView" destination="IbE-yu-a1d" id="1nT-LL-81Z"/>
+                <outlet property="videoTimeLabel" destination="QH1-TP-j1O" id="wGk-0g-fsZ"/>
+                <outlet property="videoTitleLabel" destination="VZ9-t5-E7A" id="Obs-dt-Idh"/>
+                <outlet property="videoVagueView" destination="BqA-Wa-12j" id="zjX-KB-0C0"/>
+            </connections>
+            <point key="canvasLocation" x="37" y="156"/>
+        </tableViewCell>
+    </objects>
+</document>
