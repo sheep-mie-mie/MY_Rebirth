@@ -10,4 +10,17 @@
 
 @interface MY_TemperatureView : UIView
 
+
+/**
+ 初始化
+
+ @param frame frame
+ @param temperature 气温
+ @return self
+ */
+- (instancetype)initWithFrame:(CGRect)frame temperature:(CGFloat)temperature;
+
+
+
+
 @end

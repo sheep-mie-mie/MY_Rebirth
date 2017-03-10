@@ -22,10 +22,6 @@
  */
 @property (nonatomic, strong) UITableView *myWeatherTableView;
 /**
- 改变颜色Label
- */
-@property (nonatomic, strong) MY_ChangeColorLabel *changeColorLabel;
-/**
  湿度
  */
 @property (nonatomic, strong) MY_HumidityView *humidityView;
@@ -76,6 +72,9 @@
         
     } else {
         //显示控件
+        //温度
+        self.temperatureView = [[MY_TemperatureView alloc] initWithFrame:CGRectMake(Width / 2, Height - 3 * Width / 2 - 64, Width / 2.f, Width / 2.f) temperature:16];
+        [self.myWeatherTableView addSubview:self.temperatureView];
         //湿度
         self.humidityView = [[MY_HumidityView alloc] initWithFrame:CGRectMake(0, Height - Width - 64, Width / 2.f, Width / 2.f)];
         [self.humidityView my_humidityViewBuildView];
