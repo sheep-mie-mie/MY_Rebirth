@@ -15,25 +15,15 @@
  */
 @property (nonatomic, assign) CGFloat circleByOneSecond;
 
-/**
- 风的速度
- */
-@property (nonatomic, assign) CGFloat windSpeed;
 
 /**
- 创建View
- */
-- (void)my_windSpeedViewBuildView;
+ 重写init方法
 
-/**
- 显示
+ @param frame frame
+ @param windSpeed 风速
+ @return self
  */
-- (void)my_windSpeedViewShow;
-
-/**
- 隐藏
- */
-- (void)my_windSpeedViewHide;
+- (instancetype)initWithFrame:(CGRect)frame windSpeed:(CGFloat)windSpeed;
 
 
 

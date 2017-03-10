@@ -82,8 +82,7 @@
         self.humidityView.backgroundColor = [UIColor goldColor];
         [self.myWeatherTableView addSubview:self.humidityView];
         //风速
-        self.windSpeedView = [[MY_WindSpeedView alloc] initWithFrame:CGRectMake(Width / 2.f, Height - Width / 2.f - 64, Width / 2.f, Width / 2.f)];
-        [self.windSpeedView my_windSpeedViewBuildView];
+        self.windSpeedView = [[MY_WindSpeedView alloc] initWithFrame:CGRectMake(Width / 2.f, Height - Width / 2.f - 64, Width / 2.f, Width / 2.f) windSpeed:3.f];
         [self.myWeatherTableView addSubview:self.windSpeedView];
         //气温差
         
@@ -112,11 +111,11 @@
     //湿度
     self.humidityView.humidityPercent = 14/100.f;
     //风速显示
-    self.windSpeedView.windSpeed = 3;
+    
     self.windSpeedView.circleByOneSecond = 3 / 10.f;
     
     [self.humidityView my_humidityViewAnimationShow];
-    [self.windSpeedView my_windSpeedViewShow];
+    
     
 }
 
