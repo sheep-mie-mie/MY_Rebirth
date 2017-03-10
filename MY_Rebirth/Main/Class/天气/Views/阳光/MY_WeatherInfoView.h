@@ -10,4 +10,17 @@
 
 @interface MY_WeatherInfoView : UIView
 
+
+/**
+ 重写init
+
+ @param frame frame
+ @param weatherNumber 天气文本
+ @return self
+ */
+- (instancetype)initWithFrame:(CGRect)frame weatherNumber:(NSInteger)weatherNumber;
+
+
+
+
 @end

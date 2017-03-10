@@ -82,14 +82,13 @@
         self.humidityView.backgroundColor = [UIColor goldColor];
         [self.myWeatherTableView addSubview:self.humidityView];
         //风速
-        self.windSpeedView = [[MY_WindSpeedView alloc] initWithFrame:CGRectMake(Width / 2.f, Height - Width / 2.f - 64, Width / 2.f, Width / 2.f) windSpeed:3.f];
+        self.windSpeedView = [[MY_WindSpeedView alloc] initWithFrame:CGRectMake(Width / 2.f, Height - Width / 2.f - 64, Width / 2.f, Width / 2.f) windSpeed:1.f];
         [self.myWeatherTableView addSubview:self.windSpeedView];
         //气温差
         
         //阳光
-        UIView *view = [[UIView alloc] initWithFrame:CGRectMake(0, Height - 3 * Width / 2 - 64, Width / 2, Width / 2)];
-        view.backgroundColor = [UIColor peachRed];
-        [self.myWeatherTableView addSubview:view];
+        self.weatherInfoView = [[MY_WeatherInfoView alloc] initWithFrame:CGRectMake(0, Height - 3 * Width / 2 - 64, Width / 2, Width / 2) weatherNumber:800];
+        [self.myWeatherTableView addSubview:self.weatherInfoView];
         //气温表
         
         //天气

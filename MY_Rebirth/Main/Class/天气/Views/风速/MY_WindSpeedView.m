@@ -47,7 +47,7 @@
     //标题
     UILabel *windTitleLabel = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, MAINSCREEN_WIDTH / 2 - 20, 40)];
     windTitleLabel.text = @"Wind Speed";
-    windTitleLabel.font = [UIFont systemFontOfSize:20];
+    windTitleLabel.font = [UIFont fontWithName:LATO_LIGHT size:20];
     windTitleLabel.textAlignment = NSTextAlignmentCenter;
     [self addSubview:windTitleLabel];
     //windTitleLabel.backgroundColor = [UIColor blueColor];
