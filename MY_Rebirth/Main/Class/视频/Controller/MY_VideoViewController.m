@@ -59,7 +59,7 @@
 
 #pragma mark ------------//加载数据\\------------
 - (void)loadVideoViewData {
-    
+    [MYNetworkingObject updateBaseUrl:operEyesUrl];
     [MYNetWorkAPI loadOpenEyesInformationDataWithSuccess:^(MY_OpenEyesVoideModel *result) {
         if ([result.dailyList count]) {
             [self.videoDataArray addObjectsFromArray:result.dailyList];

@@ -69,6 +69,9 @@
 #import "AddedFont.h"
 //颜色
 #import "AppColor.h"
+//定位
+#import "MY_LocationManager.h"
+
 
 #endif
 

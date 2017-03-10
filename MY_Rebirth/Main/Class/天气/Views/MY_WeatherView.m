@@ -10,6 +10,10 @@
 #import "MY_HumidityView.h"
 #import "MY_ChangeColorLabel.h"
 #import "MY_WindSpeedView.h"
+#import "MY_TemperatureView.h"
+#import "MY_SunInfoView.h"
+#import "MY_MaxTempView.h"
+#import "MY_WeatherInfoView.h"
 
 @interface MY_WeatherView ()<UITableViewDelegate>
 
@@ -18,17 +22,34 @@
  */
 @property (nonatomic, strong) UITableView *myWeatherTableView;
 /**
- 湿度
- */
-@property (nonatomic, strong) MY_HumidityView *humidityView;
-/**
  改变颜色Label
  */
 @property (nonatomic, strong) MY_ChangeColorLabel *changeColorLabel;
 /**
+ 湿度
+ */
+@property (nonatomic, strong) MY_HumidityView *humidityView;
+/**
  风速
  */
 @property (nonatomic, strong) MY_WindSpeedView *windSpeedView;
+/**
+ 气温
+ */
+@property (nonatomic, strong) MY_TemperatureView *temperatureView;
+/**
+ 日出
+ */
+@property (nonatomic, strong) MY_SunInfoView *sunInfoView;
+/**
+ 温差
+ */
+@property (nonatomic, strong) MY_MaxTempView *maxTempView;
+/**
+ 阳光
+ */
+@property (nonatomic, strong) MY_WeatherInfoView *weatherInfoView;
+
 
 @end
 

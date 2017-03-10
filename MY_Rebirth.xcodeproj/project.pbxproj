@@ -26,6 +26,13 @@
 		887810BC1E680C98002B9BB3 /* GCDQueue.m in Sources */ = {isa = PBXBuildFile; fileRef = 887810B61E680C98002B9BB3 /* GCDQueue.m */; };
 		887810BD1E680C98002B9BB3 /* GCDSemaphore.m in Sources */ = {isa = PBXBuildFile; fileRef = 887810B81E680C98002B9BB3 /* GCDSemaphore.m */; };
 		887810BE1E680C98002B9BB3 /* GCDTimer.m in Sources */ = {isa = PBXBuildFile; fileRef = 887810BA1E680C98002B9BB3 /* GCDTimer.m */; };
+		888529491E70E84C00691D40 /* MY_TemperatureView.m in Sources */ = {isa = PBXBuildFile; fileRef = 888529481E70E84C00691D40 /* MY_TemperatureView.m */; };
+		8885294F1E70E87500691D40 /* MY_MaxTempView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8885294E1E70E87500691D40 /* MY_MaxTempView.m */; };
+		888529581E70E90B00691D40 /* MY_SunInfoView.m in Sources */ = {isa = PBXBuildFile; fileRef = 888529571E70E90B00691D40 /* MY_SunInfoView.m */; };
+		8885295B1E70E92200691D40 /* MY_WeatherInfoView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8885295A1E70E92200691D40 /* MY_WeatherInfoView.m */; };
+		888529631E71080C00691D40 /* MY_WeekWeatherModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 888529621E71080C00691D40 /* MY_WeekWeatherModel.m */; };
+		888529661E71081900691D40 /* MY_DetailWeatherModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 888529651E71081900691D40 /* MY_DetailWeatherModel.m */; };
+		888529681E71560700691D40 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 888529671E71560700691D40 /* MapKit.framework */; };
 		8891DFA11E652424005BF149 /* MY_Rebirth in Resources */ = {isa = PBXBuildFile; fileRef = 8891DFA01E652424005BF149 /* MY_Rebirth */; };
 		8893C11A1E667906000FA043 /* MY_TitleMoveLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 8893C1191E667906000FA043 /* MY_TitleMoveLabel.m */; };
 		8893C11E1E66A5C2000FA043 /* MY_ChangeColorLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 8893C11D1E66A5C2000FA043 /* MY_ChangeColorLabel.m */; };
@@ -56,6 +63,7 @@
 		88A143341E544AB700FC3EAB /* UIColor+MY_Color.m in Sources */ = {isa = PBXBuildFile; fileRef = 88A143331E544AB700FC3EAB /* UIColor+MY_Color.m */; };
 		88A143381E544F0400FC3EAB /* NSString+MY_NSString.m in Sources */ = {isa = PBXBuildFile; fileRef = 88A143371E544F0400FC3EAB /* NSString+MY_NSString.m */; };
 		88A1433F1E5451B700FC3EAB /* UIFont+MY_Font.m in Sources */ = {isa = PBXBuildFile; fileRef = 88A1433E1E5451B700FC3EAB /* UIFont+MY_Font.m */; };
+		88ACF6911E722DB700D67A17 /* MY_LocationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 88ACF6901E722DB700D67A17 /* MY_LocationManager.m */; };
 		88B4C1281E553F4400E53870 /* MY_GlobalManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 88B4C1271E553F4400E53870 /* MY_GlobalManager.m */; };
 		88B4C12B1E55487700E53870 /* MYNetworkingManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 88B4C12A1E55487700E53870 /* MYNetworkingManager.m */; };
 		88B4C1361E557E0E00E53870 /* MY_LaunchAdView.m in Sources */ = {isa = PBXBuildFile; fileRef = 88B4C1331E557E0E00E53870 /* MY_LaunchAdView.m */; };
@@ -129,6 +137,19 @@
 		887810B81E680C98002B9BB3 /* GCDSemaphore.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GCDSemaphore.m; sourceTree = "<group>"; };
 		887810B91E680C98002B9BB3 /* GCDTimer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GCDTimer.h; sourceTree = "<group>"; };
 		887810BA1E680C98002B9BB3 /* GCDTimer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GCDTimer.m; sourceTree = "<group>"; };
+		888529471E70E84C00691D40 /* MY_TemperatureView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MY_TemperatureView.h; sourceTree = "<group>"; };
+		888529481E70E84C00691D40 /* MY_TemperatureView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MY_TemperatureView.m; sourceTree = "<group>"; };
+		8885294D1E70E87500691D40 /* MY_MaxTempView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MY_MaxTempView.h; sourceTree = "<group>"; };
+		8885294E1E70E87500691D40 /* MY_MaxTempView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MY_MaxTempView.m; sourceTree = "<group>"; };
+		888529561E70E90B00691D40 /* MY_SunInfoView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MY_SunInfoView.h; sourceTree = "<group>"; };
+		888529571E70E90B00691D40 /* MY_SunInfoView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MY_SunInfoView.m; sourceTree = "<group>"; };
+		888529591E70E92200691D40 /* MY_WeatherInfoView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MY_WeatherInfoView.h; sourceTree = "<group>"; };
+		8885295A1E70E92200691D40 /* MY_WeatherInfoView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MY_WeatherInfoView.m; sourceTree = "<group>"; };
+		888529611E71080C00691D40 /* MY_WeekWeatherModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MY_WeekWeatherModel.h; sourceTree = "<group>"; };
+		888529621E71080C00691D40 /* MY_WeekWeatherModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MY_WeekWeatherModel.m; sourceTree = "<group>"; };
+		888529641E71081900691D40 /* MY_DetailWeatherModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MY_DetailWeatherModel.h; sourceTree = "<group>"; };
+		888529651E71081900691D40 /* MY_DetailWeatherModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MY_DetailWeatherModel.m; sourceTree = "<group>"; };
+		888529671E71560700691D40 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		8891DFA01E652424005BF149 /* MY_Rebirth */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = MY_Rebirth; sourceTree = "<group>"; };
 		8893C1181E667906000FA043 /* MY_TitleMoveLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MY_TitleMoveLabel.h; sourceTree = "<group>"; };
 		8893C1191E667906000FA043 /* MY_TitleMoveLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MY_TitleMoveLabel.m; sourceTree = "<group>"; };
@@ -187,6 +208,8 @@
 		88A143371E544F0400FC3EAB /* NSString+MY_NSString.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+MY_NSString.m"; sourceTree = "<group>"; };
 		88A1433D1E5451B700FC3EAB /* UIFont+MY_Font.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIFont+MY_Font.h"; sourceTree = "<group>"; };
 		88A1433E1E5451B700FC3EAB /* UIFont+MY_Font.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIFont+MY_Font.m"; sourceTree = "<group>"; };
+		88ACF68F1E722DB700D67A17 /* MY_LocationManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MY_LocationManager.h; sourceTree = "<group>"; };
+		88ACF6901E722DB700D67A17 /* MY_LocationManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MY_LocationManager.m; sourceTree = "<group>"; };
 		88B4C1261E553F4400E53870 /* MY_GlobalManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MY_GlobalManager.h; sourceTree = "<group>"; };
 		88B4C1271E553F4400E53870 /* MY_GlobalManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MY_GlobalManager.m; sourceTree = "<group>"; };
 		88B4C1291E55487700E53870 /* MYNetworkingManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MYNetworkingManager.h; sourceTree = "<group>"; };
@@ -230,6 +253,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				888529681E71560700691D40 /* MapKit.framework in Frameworks */,
 				8301171E9DB7E2905FDEEE7D /* libPods-MY_Rebirth.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -263,6 +287,7 @@
 		864F6A45D0DED6B2E63F9AD0 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				888529671E71560700691D40 /* MapKit.framework */,
 				38035E34EFC3CE9B6D19290C /* libPods-MY_Rebirth.a */,
 			);
 			name = Frameworks;
@@ -324,6 +349,61 @@
 				887810BA1E680C98002B9BB3 /* GCDTimer.m */,
 			);
 			path = YXGCD;
+			sourceTree = "<group>";
+		};
+		888529431E70E80500691D40 /* 气温 */ = {
+			isa = PBXGroup;
+			children = (
+				888529471E70E84C00691D40 /* MY_TemperatureView.h */,
+				888529481E70E84C00691D40 /* MY_TemperatureView.m */,
+				88ACF68E1E722DA700D67A17 /* 定位 */,
+			);
+			path = "气温";
+			sourceTree = "<group>";
+		};
+		888529441E70E80500691D40 /* 日出 */ = {
+			isa = PBXGroup;
+			children = (
+				888529561E70E90B00691D40 /* MY_SunInfoView.h */,
+				888529571E70E90B00691D40 /* MY_SunInfoView.m */,
+			);
+			path = "日出";
+			sourceTree = "<group>";
+		};
+		888529451E70E80500691D40 /* 温差 */ = {
+			isa = PBXGroup;
+			children = (
+				8885294D1E70E87500691D40 /* MY_MaxTempView.h */,
+				8885294E1E70E87500691D40 /* MY_MaxTempView.m */,
+			);
+			path = "温差";
+			sourceTree = "<group>";
+		};
+		888529461E70E80500691D40 /* 阳光 */ = {
+			isa = PBXGroup;
+			children = (
+				888529591E70E92200691D40 /* MY_WeatherInfoView.h */,
+				8885295A1E70E92200691D40 /* MY_WeatherInfoView.m */,
+			);
+			path = "阳光";
+			sourceTree = "<group>";
+		};
+		8885295F1E7107B700691D40 /* 两周天气 */ = {
+			isa = PBXGroup;
+			children = (
+				888529611E71080C00691D40 /* MY_WeekWeatherModel.h */,
+				888529621E71080C00691D40 /* MY_WeekWeatherModel.m */,
+			);
+			path = "两周天气";
+			sourceTree = "<group>";
+		};
+		888529601E7107B700691D40 /* 天气详情 */ = {
+			isa = PBXGroup;
+			children = (
+				888529641E71081900691D40 /* MY_DetailWeatherModel.h */,
+				888529651E71081900691D40 /* MY_DetailWeatherModel.m */,
+			);
+			path = "天气详情";
 			sourceTree = "<group>";
 		};
 		8893C1171E6678E7000FA043 /* 标题移动 */ = {
@@ -560,6 +640,8 @@
 		88A142F31E5435A100FC3EAB /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				8885295F1E7107B700691D40 /* 两周天气 */,
+				888529601E7107B700691D40 /* 天气详情 */,
 				8893C12F1E66BEC9000FA043 /* 风速 */,
 			);
 			path = Model;
@@ -573,6 +655,10 @@
 				88DB1E001E65569E005B80F7 /* 湿度 */,
 				8893C11B1E66A59F000FA043 /* 改变颜色 */,
 				8893C1231E66B274000FA043 /* 风速 */,
+				888529431E70E80500691D40 /* 气温 */,
+				888529441E70E80500691D40 /* 日出 */,
+				888529451E70E80500691D40 /* 温差 */,
+				888529461E70E80500691D40 /* 阳光 */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -794,6 +880,15 @@
 			path = UIFont;
 			sourceTree = "<group>";
 		};
+		88ACF68E1E722DA700D67A17 /* 定位 */ = {
+			isa = PBXGroup;
+			children = (
+				88ACF68F1E722DB700D67A17 /* MY_LocationManager.h */,
+				88ACF6901E722DB700D67A17 /* MY_LocationManager.m */,
+			);
+			path = "定位";
+			sourceTree = "<group>";
+		};
 		88B4C11D1E5535B800E53870 /* 启动页 */ = {
 			isa = PBXGroup;
 			children = (
@@ -996,8 +1091,17 @@
 						DevelopmentTeam = 3858N9SG7V;
 						ProvisioningStyle = Automatic;
 						SystemCapabilities = {
+							com.apple.BackgroundModes = {
+								enabled = 0;
+							};
+							com.apple.Maps.iOS = {
+								enabled = 0;
+							};
 							com.apple.Push = {
 								enabled = 1;
+							};
+							com.apple.VPNLite = {
+								enabled = 0;
 							};
 						};
 					};
@@ -1135,8 +1239,10 @@
 				88DB1DFF1E65554F005B80F7 /* UIView+MY_SetRect.m in Sources */,
 				88F6CB801E5ABBED00B7CB86 /* MY_VideoPlayerView.m in Sources */,
 				8893C1221E66A8CC000FA043 /* MY_AlphaView.m in Sources */,
+				888529581E70E90B00691D40 /* MY_SunInfoView.m in Sources */,
 				881D58241E6666BD00CC6355 /* NSString+Color.m in Sources */,
 				88A1433F1E5451B700FC3EAB /* UIFont+MY_Font.m in Sources */,
+				8885294F1E70E87500691D40 /* MY_MaxTempView.m in Sources */,
 				881D581F1E66580B00CC6355 /* MY_ConfigAttributedString.m in Sources */,
 				88A142AD1E542E0400FC3EAB /* main.m in Sources */,
 				88A143291E54435900FC3EAB /* MY_BaseTabBarController.m in Sources */,
@@ -1151,14 +1257,18 @@
 				88B4C1361E557E0E00E53870 /* MY_LaunchAdView.m in Sources */,
 				88A1432C1E5447C300FC3EAB /* MY_BaseNavigationController.m in Sources */,
 				8893C1321E66BEF1000FA043 /* MY_CGRectStoreValueModel.m in Sources */,
+				888529661E71081900691D40 /* MY_DetailWeatherModel.m in Sources */,
 				88B4C1371E557E0E00E53870 /* MY_LaunchAdViewController.m in Sources */,
 				8875AE501E56A4EC008DC6FE /* MY_OpenEyesVoideModel.m in Sources */,
 				88DB1E031E6556BD005B80F7 /* MY_HumidityView.m in Sources */,
 				8875AE4D1E56A44E008DC6FE /* MYNetWorkAPI.m in Sources */,
 				88B4C1281E553F4400E53870 /* MY_GlobalManager.m in Sources */,
 				887810BB1E680C98002B9BB3 /* GCDGroup.m in Sources */,
+				888529631E71080C00691D40 /* MY_WeekWeatherModel.m in Sources */,
 				88A143341E544AB700FC3EAB /* UIColor+MY_Color.m in Sources */,
 				8893C12A1E66B39B000FA043 /* MY_ThreeLineView.m in Sources */,
+				8885295B1E70E92200691D40 /* MY_WeatherInfoView.m in Sources */,
+				88ACF6911E722DB700D67A17 /* MY_LocationManager.m in Sources */,
 				88A143201E54401D00FC3EAB /* MY_VideoViewController.m in Sources */,
 				88A143381E544F0400FC3EAB /* NSString+MY_NSString.m in Sources */,
 				88DB1E241E65785E005B80F7 /* MY_HumidityCount.m in Sources */,
@@ -1170,6 +1280,7 @@
 				88DB1E211E6573BE005B80F7 /* MY_NumberCount.m in Sources */,
 				887810BC1E680C98002B9BB3 /* GCDQueue.m in Sources */,
 				88DB1E1D1E656DA0005B80F7 /* MY_HumidityCountLabel.m in Sources */,
+				888529491E70E84C00691D40 /* MY_TemperatureView.m in Sources */,
 				8893C11E1E66A5C2000FA043 /* MY_ChangeColorLabel.m in Sources */,
 				88B4C13A1E557F4D00E53870 /* MY_AdWebViewController.m in Sources */,
 				8893C12E1E66B531000FA043 /* MY_AnimatedLineView.m in Sources */,

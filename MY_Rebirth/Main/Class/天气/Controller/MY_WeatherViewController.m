@@ -9,12 +9,17 @@
 #import "MY_WeatherViewController.h"
 #import "MY_WeatherView.h"
 
-@interface MY_WeatherViewController ()<MY_WeatherViewDelegate>
+
+@interface MY_WeatherViewController ()<MY_WeatherViewDelegate,MY_LocationManagerDelegate>
 
 /**
  天气
  */
 @property (nonatomic, strong) MY_WeatherView *myWeatherView;
+/**
+ 定位
+ */
+@property (nonatomic, strong) MY_LocationManager *locationManager;
 
 @end
 
@@ -22,7 +27,6 @@
 
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
-    
     self.navigationController.navigationBarHidden = YES;
 }
 
@@ -33,6 +37,14 @@
     //设置页面
     [self buildViewState];
     
+//    [MYNetWorkAPI loadWeekWeatherInfoWithCityId:1797929 success:^(MY_WeekWeatherModel *result) {
+//        if (result.cod == 200) {
+//            
+//        }
+//    } faulure:^(NSError *error) {
+//        
+//    } showView:nil];
+
     
 }
 
@@ -43,15 +55,37 @@
     
     //天气
     [self.view addSubview:self.myWeatherView];
+    //定位
+    _locationManager = [MY_LocationManager myLocationManager];
+    _locationManager.delegate = self;
+    //更新url
+    [MYNetworkingObject updateBaseUrl:weatherInfoUrl];
+}
+
+
+#pragma mark ------------//Location Manager\\------------
+- (void)locationManager:(MY_LocationManager *)manager didUpCllocation:(CLLocation *)location {
     
-    
+    NSLog(@"%lf  %lf",location.coordinate.latitude, location.coordinate.longitude);
+    [MYNetWorkAPI loadWeatherInfoWithLoactionLatitude:location.coordinate.latitude
+                                            longitude:location.coordinate.longitude
+                                              success:^(MY_DetailWeatherModel *result) {
+                                                  if (result.cod == 200) {
+                                                      
+                                                  }
+                                              } failure:^(NSError *error) {
+                                                  
+                                              } showView:nil];
+}
+
+- (void)locationManager:(MY_LocationManager *)manager didFailed:(NSError *)error {
     
     
 }
 
-
-
-
+- (void)locationManagerServerClosed:(MY_LocationManager *)manager {
+    
+}
 
 
 
@@ -67,8 +101,6 @@
     }
     return _myWeatherView;
 }
-
-
 
 
 - (void)didReceiveMemoryWarning {

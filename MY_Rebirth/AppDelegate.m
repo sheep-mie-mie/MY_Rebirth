@@ -72,7 +72,6 @@
             SHOW_ALERT(@"网络连接断开,请检查网络!");
         }
     }];
-    [MYNetworkingObject updateBaseUrl:baseUrl];
     [MYNetworkingObject enableInterfaceDebug:YES];
     [MYNetworkingObject setTimeOut:15];
     // 配置请求和响应类型，由于部分伙伴们的服务器不接收JSON传过去，现在默认值改成了plainText
