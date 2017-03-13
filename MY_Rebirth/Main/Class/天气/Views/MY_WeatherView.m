@@ -86,10 +86,9 @@
         //阳光
         self.weatherInfoView = [[MY_WeatherInfoView alloc] initWithFrame:CGRectMake(0, Height - 3 * Width / 2 - 64, Width / 2, Width / 2) weatherNumber:800];
         [self.myWeatherTableView addSubview:self.weatherInfoView];
-        //气温表
-        
-        //天气
-        
+        //日出/落
+        self.sunInfoView = [[MY_SunInfoView alloc] initWithFrame:CGRectMake(Width / 2.f, Height - Width - 64, Width / 2.f, Width / 2.f) withSunSire:@"06:16" sunSet:@"18:01"];
+        [self.myWeatherTableView addSubview:self.sunInfoView];
     }
     //创建出线条
     
