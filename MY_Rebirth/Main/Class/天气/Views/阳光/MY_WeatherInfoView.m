@@ -51,7 +51,7 @@
     }];
     weatherTitleLabel.text = @"Weather";
     weatherTitleLabel.textAlignment = NSTextAlignmentCenter;
-    weatherTitleLabel.font = [UIFont fontWithName:LATO_LIGHT size:20];
+    weatherTitleLabel.font = [UIFont fontWithName:LATO_LIGHT size:AllTitleFont];
     
     //创建
     self.glowLabel = [[UILabel alloc] initWithFrame:self.bounds];

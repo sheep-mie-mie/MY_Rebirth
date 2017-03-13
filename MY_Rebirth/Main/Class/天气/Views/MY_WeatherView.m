@@ -76,9 +76,7 @@
         self.temperatureView = [[MY_TemperatureView alloc] initWithFrame:CGRectMake(Width / 2, Height - 3 * Width / 2 - 64, Width / 2.f, Width / 2.f) temperature:16];
         [self.myWeatherTableView addSubview:self.temperatureView];
         //湿度
-        self.humidityView = [[MY_HumidityView alloc] initWithFrame:CGRectMake(0, Height - Width - 64, Width / 2.f, Width / 2.f)];
-        [self.humidityView my_humidityViewBuildView];
-        self.humidityView.backgroundColor = [UIColor goldColor];
+        self.humidityView = [[MY_HumidityView alloc] initWithFrame:CGRectMake(0, Height - Width - 64, Width / 2.f, Width / 2.f) withHumidity:10];
         [self.myWeatherTableView addSubview:self.humidityView];
         //风速
         self.windSpeedView = [[MY_WindSpeedView alloc] initWithFrame:CGRectMake(Width / 2.f, Height - Width / 2.f - 64, Width / 2.f, Width / 2.f) windSpeed:1.f];
@@ -112,7 +110,6 @@
     
     self.windSpeedView.circleByOneSecond = 3 / 10.f;
     
-    [self.humidityView my_humidityViewAnimationShow];
     
     
 }

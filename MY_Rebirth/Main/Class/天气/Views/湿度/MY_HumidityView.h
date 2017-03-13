@@ -16,20 +16,17 @@
  */
 @property (nonatomic, assign) CGFloat humidityPercent;
 
-/**
- 创建视图
- */
-- (void)my_humidityViewBuildView;
 
 /**
- 显示动画
- */
-- (void)my_humidityViewAnimationShow;
+ 重写init方法
 
-/**
- 隐藏动画
+ @param frame frame
+ @param humidity 湿度
+ @return self
  */
-- (void)my_humidityViewAnimationHide;
+- (instancetype)initWithFrame:(CGRect)frame withHumidity:(CGFloat)humidity;
+
+
 
 
 

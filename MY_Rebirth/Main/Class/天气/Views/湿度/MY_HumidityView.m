@@ -7,111 +7,96 @@
 //
 
 #import "MY_HumidityView.h"
-#import "MY_CircleView.h"
-#import "MY_RotatedAngleView.h"
-#import "MY_HumidityCountLabel.h"
-#import "MY_TitleMoveLabel.h"
+
 
 @interface MY_HumidityView ()
 
-/**
- 满圆
- */
-@property (nonatomic, strong) MY_CircleView *fullCircle;
-/**
- 展示圆
- */
-@property (nonatomic, strong) MY_CircleView *showCircle;
-/**
- 角度视图
- */
-@property (nonatomic, strong) MY_RotatedAngleView *rotateView;
-/**
- 动画引擎
- */
-@property (nonatomic, strong) MY_HumidityCountLabel *countLabel;
-/**
- 移动标题
- */
-@property (nonatomic, strong) MY_TitleMoveLabel *titleMoveLabel;
+
 
 @end
 
 
 @implementation MY_HumidityView
 
-- (void)my_humidityViewBuildView {
-    
-    CGRect circleRect = CGRectZero;
-    CGRect rotateRect = CGRectZero;
-    if (iPhone5_5s || iPhone4_4s) {
+
+
+- (instancetype)initWithFrame:(CGRect)frame withHumidity:(CGFloat)humidity {
+    if (self = [super initWithFrame:frame]) {
         
-        circleRect = CGRectMake(0, 0, 100, 100);
-        rotateRect = CGRectMake(37, 40, circleRect.size.width, circleRect.size.height);
-    } else if (iPhone6_6s) {
-        circleRect = CGRectMake(0, 0, 110, 110);
-        rotateRect = CGRectMake(40, 50, circleRect.size.width, circleRect.size.height);
-    } else if (iPhone6_6sPlus) {
-        circleRect = CGRectMake(0, 0, 115, 115);
-        rotateRect = CGRectMake(45, 55, circleRect.size.width, circleRect.size.height);
-    } else {
-        circleRect = CGRectMake(0, 0, 90, 90);
-        rotateRect = CGRectMake(25, 15, circleRect.size.width, circleRect.size.height);
+        //self.backgroundColor = [UIColor goldColor];
+        
+        [self my_humidityViewBuildView];
+        
     }
-    //移动的头部位
-    self.titleMoveLabel = [MY_TitleMoveLabel withText:@"Humidity"];
-    [self addSubview:self.titleMoveLabel];
-    //完整的圆
-    self.fullCircle = [MY_CircleView my_circkeViewCreateDefaultViewWithFrame:circleRect];
-    self.fullCircle.lineColor = COLOR_CIRCLE_;
-    [self.fullCircle my_circkeViewBuildView];
-    //局部显示的圆
-    self.showCircle = [MY_CircleView my_circkeViewCreateDefaultViewWithFrame:circleRect];
-    [self.showCircle my_circkeViewBuildView];
-    //旋转的圆
-    self.rotateView = [[MY_RotatedAngleView alloc] initWithFrame:rotateRect];
-    [self.rotateView addSubview:self.fullCircle];
-    [self.rotateView addSubview:self.showCircle];
-    [self addSubview:self.rotateView];
-    //计数的数据
-    self.countLabel = [[MY_HumidityCountLabel alloc] initWithFrame:rotateRect];
-    self.countLabel.backgroundColor = [UIColor clearColor];
-    self.countLabel.x += 4;
-    [self addSubview:self.countLabel];
+    return self;
 }
 
-- (void)my_humidityViewAnimationShow {
+
+- (void)my_humidityViewBuildView {
+    //
+    UILabel *titleLabel = [[UILabel alloc] init];
+    [self addSubview:titleLabel];
+    [titleLabel mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.left.mas_equalTo(self.left + 20);
+        make.top.mas_equalTo(0);
+        make.height.mas_equalTo(35);
+        make.width.mas_equalTo(self.width - 40);
+    }];
+    titleLabel.text = @"Humidity";
+    titleLabel.font = [UIFont fontWithName:LATO_LIGHT size:AllTitleFont];
     
-    CGFloat circleFullPercent = 0.75;
-    CGFloat duration = 1.5;
-    //进行参数复位
-    [self.fullCircle my_circkeViewStrokeEnd:0 animated:NO duration:0];
-    [self.showCircle my_circkeViewStrokeEnd:0 animated:NO duration:0];
-    [self.fullCircle my_circkeViewStrokeStart:0 animated:NO duration:0];
-    [self.showCircle my_circkeViewStrokeStart:0 animated:NO duration:0];
-    [self.rotateView my_rotatedAngle:0];
-    //标题显示
-    [self.titleMoveLabel my_titleModeShow];
-    //设置动画
-    [self.fullCircle my_circkeViewStrokeEnd:circleFullPercent animated:YES duration:duration];
-    [self.showCircle my_circkeViewStrokeEnd:circleFullPercent * self.humidityPercent animated:YES duration:duration];
-    [self.rotateView my_rotatedAngle:45.f duration:duration];
-    self.countLabel.toValue = self.humidityPercent * 100;
-    [self.countLabel my_hunidityCountShowDuration:duration];
+    //layer层
+    CAShapeLayer *shapeLayer = [CAShapeLayer layer];
+    shapeLayer.frame = self.bounds;
+    //贝塞尔曲线
+    UIBezierPath *shapePath = [UIBezierPath bezierPathWithArcCenter:CGPointMake(self.bounds.size.width / 2, self.bounds.size.height / 2) radius:MAINSCREEN_WIDTH / 7 startAngle:M_PI_4 endAngle:M_PI / 4 * 7 clockwise:YES];
+    shapeLayer.path = shapePath.CGPath;
+    shapeLayer.fillColor   = [UIColor clearColor].CGColor;
+    shapeLayer.lineWidth   = 2.f;
+    shapeLayer.strokeColor = [UIColor lightGrayColor].CGColor;
+    [self.layer addSublayer:shapeLayer];
+    //动画
+    CABasicAnimation *pathAnimation = [CABasicAnimation animationWithKeyPath:@"shrokeEnd"];
+    pathAnimation.duration = 5.f;
+    pathAnimation.timingFunction = [CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionLinear];
+    pathAnimation.fromValue = [NSNumber numberWithFloat:0.f];
+    pathAnimation.toValue   = [NSNumber numberWithFloat:1.f];
+    pathAnimation.fillMode  = kCAFillModeForwards;
+    pathAnimation.removedOnCompletion = NO;
+    [shapeLayer addAnimation:pathAnimation forKey:@"strokeEndAnimation"];
+    
+    //湿度百分比
+    //layer层
+    CAShapeLayer *percentLayer = [CAShapeLayer layer];
+    percentLayer.frame = self.bounds;
+    //贝塞尔曲线
+    UIBezierPath *percentPath =  [UIBezierPath bezierPathWithArcCenter:CGPointMake(self.bounds.size.width / 2, self.bounds.size.height / 2) radius:MAINSCREEN_WIDTH / 7 startAngle:M_PI_4 endAngle:M_PI / 4 * 4 clockwise:YES];
+    percentLayer.path = percentPath.CGPath;
+    percentLayer.fillColor   = [UIColor clearColor].CGColor;
+    percentLayer.lineWidth   = 2.f;
+    percentLayer.strokeColor = [UIColor blackColor].CGColor;
+    [self.layer addSublayer:percentLayer];
+    //动画
+    CABasicAnimation *percentAnimat = [CABasicAnimation animationWithKeyPath:@"percent"];
+    percentAnimat.duration = 5.f;
+    percentAnimat.timingFunction = [CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionLinear];
+    percentAnimat.fromValue = [NSNumber numberWithFloat:0.f];
+    percentAnimat.toValue   = [NSNumber numberWithFloat:0.5f];
+    percentAnimat.fillMode  = kCAFillModeForwards;
+    percentAnimat.removedOnCompletion = NO;
+    [shapeLayer addAnimation:percentAnimat forKey:@"percentAnimat"];
+//
+    UILabel *percentLabel = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, 40, 40)];
+    [self addSubview:percentLabel];
+    percentLabel.center = CGPointMake(self.width / 2, self.height / 2);
+//    [percentLabel mas_makeConstraints:^(MASConstraintMaker *make) {
+//        make.centerX.centerY.mas_equalTo(self.width / 12);
+//        make.width.height.mas_equalTo(40);
+//    }];
+    percentLabel.text = @"10%";
+    percentLabel.textAlignment = NSTextAlignmentCenter;
     
 }
 
-- (void)my_humidityViewAnimationHide {
-    
-    CGFloat duration = 0.75;
-    CGFloat circleFullPercent = 0.75;
-    //标题隐藏
-    [self.titleMoveLabel my_titleModelHide];
-    
-    [self.fullCircle my_circkeViewStrokeStart:circleFullPercent animated:YES duration:duration];
-    [self.showCircle my_circkeViewStrokeStart:self.humidityPercent * circleFullPercent animated:YES duration:duration];
-    [self.rotateView my_rotatedAngle:90.f duration:duration];
-    [self.countLabel my_hunidityCountHideDuration:duration];
-}
 
 @end

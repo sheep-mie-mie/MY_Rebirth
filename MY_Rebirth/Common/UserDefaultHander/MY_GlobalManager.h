@@ -30,7 +30,6 @@ static NSString * const adLastTime = @"5";
 
 
 
-
 @interface MY_GlobalManager : NSObject
 
 

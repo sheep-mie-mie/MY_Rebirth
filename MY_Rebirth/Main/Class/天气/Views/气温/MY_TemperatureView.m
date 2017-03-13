@@ -45,7 +45,7 @@
     }];
     temperatureTitleLabel.text = @"Temperature";
     temperatureTitleLabel.textAlignment = NSTextAlignmentCenter;
-    temperatureTitleLabel.font = [UIFont fontWithName:LATO_LIGHT size:20];
+    temperatureTitleLabel.font = [UIFont fontWithName:LATO_LIGHT size:AllTitleFont];
     //温度
     UILabel *temperatureLabel = [[UILabel alloc] initWithFrame:self.bounds];
     [self addSubview:temperatureLabel];
