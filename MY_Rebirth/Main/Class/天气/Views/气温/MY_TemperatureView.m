@@ -24,8 +24,8 @@
     if (self = [super initWithFrame:frame]) {
         
         _temperature = temperature;
-        self.backgroundColor = [UIColor goldColor];
-        //[self buildTemperatureView];
+        //self.backgroundColor = [UIColor goldColor];
+        [self buildTemperatureView];
     }
     return self;
 }
@@ -47,18 +47,18 @@
     temperatureTitleLabel.textAlignment = NSTextAlignmentCenter;
     temperatureTitleLabel.font = [UIFont fontWithName:LATO_LIGHT size:20];
     //温度
-    UILabel *temperatureLabel = [[UILabel alloc] init];
+    UILabel *temperatureLabel = [[UILabel alloc] initWithFrame:self.bounds];
     [self addSubview:temperatureLabel];
-    [temperatureLabel mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.top.mas_equalTo(self.top + 20);
-        make.bottom.mas_equalTo(self.bottom - 20);
-        make.left.mas_equalTo(self.left + 20);
-        make.right.mas_equalTo(self.right - 20);
-    }];
-    temperatureLabel.backgroundColor = [UIColor goldColor];
-    temperatureLabel.text = [NSString stringWithFormat:@"%f℃",_temperature];
+//    [temperatureLabel mas_makeConstraints:^(MASConstraintMaker *make) {
+//        make.top.mas_equalTo(self.top);
+//        make.left.mas_equalTo(temperatureTitleLabel.left + 20);
+//        make.width.height.mas_equalTo(self.width - 50);
+//    }];
+    //temperatureLabel.backgroundColor = [UIColor goldColor];
+    temperatureLabel.text = [NSString stringWithFormat:@"%d°",(int)_temperature];
     temperatureLabel.font = [UIFont fontWithName:LATO_LIGHT size:100];
-    
+    temperatureLabel.textAlignment = NSTextAlignmentCenter;
+    temperatureLabel.textColor = [UIColor paleVioletRed];
 }
 
 
