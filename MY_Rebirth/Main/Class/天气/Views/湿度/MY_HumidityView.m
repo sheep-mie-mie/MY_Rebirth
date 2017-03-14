@@ -11,7 +11,7 @@
 
 @interface MY_HumidityView ()
 
-
+@property (nonatomic, assign) CGFloat humidity;
 
 @end
 
@@ -24,6 +24,7 @@
     if (self = [super initWithFrame:frame]) {
         
         //self.backgroundColor = [UIColor goldColor];
+        _humidity = humidity;
         
         [self my_humidityViewBuildView];
         
@@ -70,7 +71,7 @@
     CAShapeLayer *percentLayer = [CAShapeLayer layer];
     percentLayer.frame = self.bounds;
     //贝塞尔曲线
-    UIBezierPath *percentPath =  [UIBezierPath bezierPathWithArcCenter:CGPointMake(self.bounds.size.width / 2, self.bounds.size.height / 2) radius:MAINSCREEN_WIDTH / 7 startAngle:M_PI_4 endAngle:M_PI / 4 * 4 clockwise:YES];
+    UIBezierPath *percentPath =  [UIBezierPath bezierPathWithArcCenter:CGPointMake(self.bounds.size.width / 2, self.bounds.size.height / 2) radius:MAINSCREEN_WIDTH / 7 startAngle:M_PI_4 endAngle:M_PI_4 * 7 / _humidity + M_PI_4 clockwise:YES];
     percentLayer.path = percentPath.CGPath;
     percentLayer.fillColor   = [UIColor clearColor].CGColor;
     percentLayer.lineWidth   = 2.f;
@@ -93,7 +94,7 @@
 //        make.centerX.centerY.mas_equalTo(self.width / 12);
 //        make.width.height.mas_equalTo(40);
 //    }];
-    percentLabel.text = @"10%";
+    percentLabel.text = [NSString stringWithFormat:@"%lf%%",_humidity];
     percentLabel.textAlignment = NSTextAlignmentCenter;
     
 }

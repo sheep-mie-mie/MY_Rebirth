@@ -21,6 +21,13 @@
  */
 @property (nonatomic, strong) MY_LocationManager *locationManager;
 
+/**
+ 数据源
+ */
+@property (nonatomic, strong) NSMutableArray <MY_DetailWeatherModel *>* dataArray;
+
+@property (nonatomic, strong) MY_DetailWeatherModel *weatherModel;
+
 @end
 
 @implementation MY_WeatherViewController
@@ -71,7 +78,9 @@
                                             longitude:location.coordinate.longitude
                                               success:^(MY_DetailWeatherModel *result) {
                                                   if (result.cod == 200) {
-                                                      
+                                                      [self.dataArray addObject:result];
+                                                      _weatherModel = result;
+                                                      self.myWeatherView.weatherModel = result;
                                                   }
                                               } failure:^(NSError *error) {
                                                   
@@ -81,9 +90,12 @@
 - (void)locationManager:(MY_LocationManager *)manager didFailed:(NSError *)error {
     
     
+    
 }
 
 - (void)locationManagerServerClosed:(MY_LocationManager *)manager {
+    
+    
     
 }
 
@@ -101,6 +113,14 @@
     }
     return _myWeatherView;
 }
+
+- (NSMutableArray<MY_DetailWeatherModel *> *)dataArray {
+    if (_dataArray == nil) {
+        _dataArray = [[NSMutableArray alloc] init];
+    }
+    return _dataArray;
+}
+
 
 
 - (void)didReceiveMemoryWarning {

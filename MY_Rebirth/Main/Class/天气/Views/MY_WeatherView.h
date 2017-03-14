@@ -11,46 +11,26 @@
 
 @protocol MY_WeatherViewDelegate <NSObject>
 
-/**
- 上拉加载事件
 
- @param condition 数据
- */
-- (void)my_weatherViewPullUpEventWithData:(NSDictionary *)condition;
-/**
- 下拉刷新
- */
-- (void)my_weatherViewPullDownToRefreshData;
 
 @end
 
 
 @interface MY_WeatherView : UIView
 
+@property (nonatomic, strong) MY_DetailWeatherModel *weatherModel;
 
 /**
  代理
  */
 @property (nonatomic, assign) id<MY_WeatherViewDelegate> delegate;
 
-#warning mark--天气数据
+
 
 /**
- 显示动画
- */
-- (void)my_weatherViewAnimationShow;
-
-/**
- 隐藏动画
- */
-- (void)my_weatherViewAnimationHide;
-
-/**
- 创建出View
+ 创建视图
  */
 - (void)my_weatherViewBuildView;
-
-
 
 
 

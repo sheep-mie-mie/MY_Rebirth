@@ -59,6 +59,32 @@
     
     [self addSubview:self.myWeatherTableView];
     
+    //定位地址
+    UILabel *locationLabel = [[UILabel alloc] init];
+    [self.myWeatherTableView addSubview:locationLabel];
+    [locationLabel mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.top.left.mas_equalTo(_myWeatherTableView);
+        make.width.mas_equalTo(MAINSCREEN_WIDTH / 2);
+        make.height.mas_equalTo(40);
+    }];
+    locationLabel.text = [NSString stringWithFormat:@"  %@",_weatherModel.name];
+    locationLabel.font = [UIFont fontWithName:LATO_LIGHT size:30];
+    //时间
+    UILabel *dateLabel = [[UILabel alloc] init];
+    [self.myWeatherTableView addSubview:dateLabel];
+    [dateLabel mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.top.right.mas_equalTo(_myWeatherTableView);
+        make.left.mas_equalTo(locationLabel.mas_right);
+        make.height.mas_equalTo(locationLabel.mas_height);
+    }];
+    NSDate *nowDate = [NSDate date];
+    NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
+    [formatter setDateFormat:@"YYYY.MM.dd"];
+    NSString *nowDateStr = [formatter stringFromDate:nowDate];
+    dateLabel.text = [NSString stringWithFormat:@"%@",nowDateStr];
+    dateLabel.font = [UIFont fontWithName:LATO_LIGHT size:15];
+    dateLabel.textAlignment = NSTextAlignmentRight;
+    
     if (iPhone4_4s) {
         //显示控件
         //湿度
@@ -73,19 +99,20 @@
     } else {
         //显示控件
         //温度
-        self.temperatureView = [[MY_TemperatureView alloc] initWithFrame:CGRectMake(Width / 2, Height - 3 * Width / 2 - 64, Width / 2.f, Width / 2.f) temperature:16];
+        self.temperatureView = [[MY_TemperatureView alloc] initWithFrame:CGRectMake(Width / 2, Height - 3 * Width / 2 - 64, Width / 2.f, Width / 2.f) temperature:(CGFloat)_weatherModel.main.temp - 273.15];
         [self.myWeatherTableView addSubview:self.temperatureView];
         //湿度
-        self.humidityView = [[MY_HumidityView alloc] initWithFrame:CGRectMake(0, Height - Width - 64, Width / 2.f, Width / 2.f) withHumidity:10];
+        self.humidityView = [[MY_HumidityView alloc] initWithFrame:CGRectMake(0, Height - Width - 64, Width / 2.f, Width / 2.f) withHumidity:_weatherModel.main.humidity];
         [self.myWeatherTableView addSubview:self.humidityView];
         //风速
         self.windSpeedView = [[MY_WindSpeedView alloc] initWithFrame:CGRectMake(Width / 2.f, Height - Width / 2.f - 64, Width / 2.f, Width / 2.f) windSpeed:1.f];
         [self.myWeatherTableView addSubview:self.windSpeedView];
         //气温差
-        self.maxTempView = [[MY_MaxTempView alloc] initWithFrame:CGRectMake(9, Height - Width / 2.f - 64, Width / 2.f, Width / 2.f) HeightTem:@"16" lowTem:@"8"];
+        self.maxTempView = [[MY_MaxTempView alloc] initWithFrame:CGRectMake(0, Height - Width / 2.f - 64, Width / 2.f, Width / 2.f) HeightTem:@"16" lowTem:@"8"];
         [self.myWeatherTableView addSubview:self.maxTempView];
         //阳光
-        self.weatherInfoView = [[MY_WeatherInfoView alloc] initWithFrame:CGRectMake(0, Height - 3 * Width / 2 - 64, Width / 2, Width / 2) weatherNumber:800];
+        MY_DetailWeatherInfoModel *weatherInfoModel = _weatherModel.weather[0];
+        self.weatherInfoView = [[MY_WeatherInfoView alloc] initWithFrame:CGRectMake(0, Height - 3 * Width / 2 - 64, Width / 2, Width / 2) weatherNumber:weatherInfoModel.weatherId];
         [self.myWeatherTableView addSubview:self.weatherInfoView];
         //日出/落
         self.sunInfoView = [[MY_SunInfoView alloc] initWithFrame:CGRectMake(Width / 2.f, Height - Width - 64, Width / 2.f, Width / 2.f) withSunSire:@"06:16" sunSet:@"18:01"];
@@ -107,22 +134,6 @@
     UIView *fourLV = [[UIView alloc] initWithFrame:CGRectMake(Width / 2, Height - 3 * Width / 2 - 64, 1, MAINSCREEN_WIDTH / 2 * 3)];
     [self.myWeatherTableView addSubview:fourLV];
     fourLV.backgroundColor = [UIColor lightGrayColor];
-    
-}
-
-
-/**
- 显示动画
- */
-- (void)my_weatherViewAnimationShow {
-    
-    //湿度
-    self.humidityView.humidityPercent = 14/100.f;
-    //风速显示
-    
-    self.windSpeedView.circleByOneSecond = 3 / 10.f;
-    
-    
     
 }
 
@@ -163,11 +174,9 @@
 
 
 
-
-
-
-
-
+- (void)setWeatherModel:(MY_DetailWeatherModel *)weatherModel {
+    _weatherModel = weatherModel;
+}
 
 #pragma mark ------------//懒加载\\------------
 - (UITableView *)myWeatherTableView {
