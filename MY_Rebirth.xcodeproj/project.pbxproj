@@ -34,14 +34,8 @@
 		888529661E71081900691D40 /* MY_DetailWeatherModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 888529651E71081900691D40 /* MY_DetailWeatherModel.m */; };
 		888529681E71560700691D40 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 888529671E71560700691D40 /* MapKit.framework */; };
 		8891DFA11E652424005BF149 /* MY_Rebirth in Resources */ = {isa = PBXBuildFile; fileRef = 8891DFA01E652424005BF149 /* MY_Rebirth */; };
-		8893C11A1E667906000FA043 /* MY_TitleMoveLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 8893C1191E667906000FA043 /* MY_TitleMoveLabel.m */; };
-		8893C11E1E66A5C2000FA043 /* MY_ChangeColorLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 8893C11D1E66A5C2000FA043 /* MY_ChangeColorLabel.m */; };
-		8893C1221E66A8CC000FA043 /* MY_AlphaView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8893C1211E66A8CC000FA043 /* MY_AlphaView.m */; };
 		8893C1261E66B288000FA043 /* MY_WindSpeedView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8893C1251E66B288000FA043 /* MY_WindSpeedView.m */; };
-		8893C12A1E66B39B000FA043 /* MY_ThreeLineView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8893C1291E66B39B000FA043 /* MY_ThreeLineView.m */; };
-		8893C12E1E66B531000FA043 /* MY_AnimatedLineView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8893C12D1E66B531000FA043 /* MY_AnimatedLineView.m */; };
 		8893C1321E66BEF1000FA043 /* MY_CGRectStoreValueModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 8893C1311E66BEF1000FA043 /* MY_CGRectStoreValueModel.m */; };
-		8893C1391E66C50E000FA043 /* MY_WindSpeedCount.m in Sources */ = {isa = PBXBuildFile; fileRef = 8893C1381E66C50E000FA043 /* MY_WindSpeedCount.m */; };
 		88A142AD1E542E0400FC3EAB /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 88A142AC1E542E0400FC3EAB /* main.m */; };
 		88A142B01E542E0400FC3EAB /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 88A142AF1E542E0400FC3EAB /* AppDelegate.m */; };
 		88A142B31E542E0400FC3EAB /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 88A142B21E542E0400FC3EAB /* ViewController.m */; };
@@ -62,6 +56,7 @@
 		88A143341E544AB700FC3EAB /* UIColor+MY_Color.m in Sources */ = {isa = PBXBuildFile; fileRef = 88A143331E544AB700FC3EAB /* UIColor+MY_Color.m */; };
 		88A143381E544F0400FC3EAB /* NSString+MY_NSString.m in Sources */ = {isa = PBXBuildFile; fileRef = 88A143371E544F0400FC3EAB /* NSString+MY_NSString.m */; };
 		88A1433F1E5451B700FC3EAB /* UIFont+MY_Font.m in Sources */ = {isa = PBXBuildFile; fileRef = 88A1433E1E5451B700FC3EAB /* UIFont+MY_Font.m */; };
+		88ABB5991E76957500F8C04D /* MY_WeekWeatherViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 88ABB5981E76957500F8C04D /* MY_WeekWeatherViewController.m */; };
 		88ACF6911E722DB700D67A17 /* MY_LocationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 88ACF6901E722DB700D67A17 /* MY_LocationManager.m */; };
 		88ACF6971E72953C00D67A17 /* EmitterLayerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 88ACF6941E72953C00D67A17 /* EmitterLayerView.m */; };
 		88ACF6981E72953C00D67A17 /* WeatherNumberMeaningTransform.m in Sources */ = {isa = PBXBuildFile; fileRef = 88ACF6961E72953C00D67A17 /* WeatherNumberMeaningTransform.m */; };
@@ -78,9 +73,6 @@
 		88DB1E161E65685B005B80F7 /* Easing.c in Sources */ = {isa = PBXBuildFile; fileRef = 88DB1E121E65685B005B80F7 /* Easing.c */; };
 		88DB1E171E65685B005B80F7 /* YXEasing.m in Sources */ = {isa = PBXBuildFile; fileRef = 88DB1E151E65685B005B80F7 /* YXEasing.m */; };
 		88DB1E1A1E656AE8005B80F7 /* MY_RotatedAngleView.m in Sources */ = {isa = PBXBuildFile; fileRef = 88DB1E191E656AE8005B80F7 /* MY_RotatedAngleView.m */; };
-		88DB1E1D1E656DA0005B80F7 /* MY_HumidityCountLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 88DB1E1C1E656DA0005B80F7 /* MY_HumidityCountLabel.m */; };
-		88DB1E211E6573BE005B80F7 /* MY_NumberCount.m in Sources */ = {isa = PBXBuildFile; fileRef = 88DB1E201E6573BE005B80F7 /* MY_NumberCount.m */; };
-		88DB1E241E65785E005B80F7 /* MY_HumidityCount.m in Sources */ = {isa = PBXBuildFile; fileRef = 88DB1E231E65785E005B80F7 /* MY_HumidityCount.m */; };
 		88F6CB7C1E5AA03300B7CB86 /* MY_VideoDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 88F6CB7B1E5AA03300B7CB86 /* MY_VideoDetailViewController.m */; };
 		88F6CB801E5ABBED00B7CB86 /* MY_VideoPlayerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 88F6CB7F1E5ABBED00B7CB86 /* MY_VideoPlayerView.m */; };
 		88F6CB841E5ABC8C00B7CB86 /* MY_VideoDescribeView.m in Sources */ = {isa = PBXBuildFile; fileRef = 88F6CB831E5ABC8C00B7CB86 /* MY_VideoDescribeView.m */; };
@@ -153,22 +145,10 @@
 		888529651E71081900691D40 /* MY_DetailWeatherModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MY_DetailWeatherModel.m; sourceTree = "<group>"; };
 		888529671E71560700691D40 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		8891DFA01E652424005BF149 /* MY_Rebirth */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = MY_Rebirth; sourceTree = "<group>"; };
-		8893C1181E667906000FA043 /* MY_TitleMoveLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MY_TitleMoveLabel.h; sourceTree = "<group>"; };
-		8893C1191E667906000FA043 /* MY_TitleMoveLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MY_TitleMoveLabel.m; sourceTree = "<group>"; };
-		8893C11C1E66A5C2000FA043 /* MY_ChangeColorLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MY_ChangeColorLabel.h; sourceTree = "<group>"; };
-		8893C11D1E66A5C2000FA043 /* MY_ChangeColorLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MY_ChangeColorLabel.m; sourceTree = "<group>"; };
-		8893C1201E66A8CC000FA043 /* MY_AlphaView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MY_AlphaView.h; sourceTree = "<group>"; };
-		8893C1211E66A8CC000FA043 /* MY_AlphaView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MY_AlphaView.m; sourceTree = "<group>"; };
 		8893C1241E66B288000FA043 /* MY_WindSpeedView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MY_WindSpeedView.h; sourceTree = "<group>"; };
 		8893C1251E66B288000FA043 /* MY_WindSpeedView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MY_WindSpeedView.m; sourceTree = "<group>"; };
-		8893C1281E66B39B000FA043 /* MY_ThreeLineView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MY_ThreeLineView.h; sourceTree = "<group>"; };
-		8893C1291E66B39B000FA043 /* MY_ThreeLineView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MY_ThreeLineView.m; sourceTree = "<group>"; };
-		8893C12C1E66B531000FA043 /* MY_AnimatedLineView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MY_AnimatedLineView.h; sourceTree = "<group>"; };
-		8893C12D1E66B531000FA043 /* MY_AnimatedLineView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MY_AnimatedLineView.m; sourceTree = "<group>"; };
 		8893C1301E66BEF1000FA043 /* MY_CGRectStoreValueModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MY_CGRectStoreValueModel.h; sourceTree = "<group>"; };
 		8893C1311E66BEF1000FA043 /* MY_CGRectStoreValueModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MY_CGRectStoreValueModel.m; sourceTree = "<group>"; };
-		8893C1371E66C50E000FA043 /* MY_WindSpeedCount.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MY_WindSpeedCount.h; sourceTree = "<group>"; };
-		8893C1381E66C50E000FA043 /* MY_WindSpeedCount.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MY_WindSpeedCount.m; sourceTree = "<group>"; };
 		88A142A81E542E0400FC3EAB /* MY_Rebirth.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MY_Rebirth.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		88A142AC1E542E0400FC3EAB /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		88A142AE1E542E0400FC3EAB /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -208,6 +188,8 @@
 		88A143371E544F0400FC3EAB /* NSString+MY_NSString.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+MY_NSString.m"; sourceTree = "<group>"; };
 		88A1433D1E5451B700FC3EAB /* UIFont+MY_Font.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIFont+MY_Font.h"; sourceTree = "<group>"; };
 		88A1433E1E5451B700FC3EAB /* UIFont+MY_Font.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIFont+MY_Font.m"; sourceTree = "<group>"; };
+		88ABB5971E76957500F8C04D /* MY_WeekWeatherViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MY_WeekWeatherViewController.h; sourceTree = "<group>"; };
+		88ABB5981E76957500F8C04D /* MY_WeekWeatherViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MY_WeekWeatherViewController.m; sourceTree = "<group>"; };
 		88ACF68F1E722DB700D67A17 /* MY_LocationManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MY_LocationManager.h; sourceTree = "<group>"; };
 		88ACF6901E722DB700D67A17 /* MY_LocationManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MY_LocationManager.m; sourceTree = "<group>"; };
 		88ACF6931E72953C00D67A17 /* EmitterLayerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EmitterLayerView.h; sourceTree = "<group>"; };
@@ -240,12 +222,6 @@
 		88DB1E151E65685B005B80F7 /* YXEasing.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YXEasing.m; sourceTree = "<group>"; };
 		88DB1E181E656AE8005B80F7 /* MY_RotatedAngleView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MY_RotatedAngleView.h; sourceTree = "<group>"; };
 		88DB1E191E656AE8005B80F7 /* MY_RotatedAngleView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MY_RotatedAngleView.m; sourceTree = "<group>"; };
-		88DB1E1B1E656DA0005B80F7 /* MY_HumidityCountLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MY_HumidityCountLabel.h; sourceTree = "<group>"; };
-		88DB1E1C1E656DA0005B80F7 /* MY_HumidityCountLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MY_HumidityCountLabel.m; sourceTree = "<group>"; };
-		88DB1E1F1E6573BE005B80F7 /* MY_NumberCount.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MY_NumberCount.h; sourceTree = "<group>"; };
-		88DB1E201E6573BE005B80F7 /* MY_NumberCount.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MY_NumberCount.m; sourceTree = "<group>"; };
-		88DB1E221E65785E005B80F7 /* MY_HumidityCount.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MY_HumidityCount.h; sourceTree = "<group>"; };
-		88DB1E231E65785E005B80F7 /* MY_HumidityCount.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MY_HumidityCount.m; sourceTree = "<group>"; };
 		88F6CB7A1E5AA03300B7CB86 /* MY_VideoDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MY_VideoDetailViewController.h; sourceTree = "<group>"; };
 		88F6CB7B1E5AA03300B7CB86 /* MY_VideoDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MY_VideoDetailViewController.m; sourceTree = "<group>"; };
 		88F6CB7E1E5ABBED00B7CB86 /* MY_VideoPlayerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MY_VideoPlayerView.h; sourceTree = "<group>"; };
@@ -413,62 +389,13 @@
 			path = "天气详情";
 			sourceTree = "<group>";
 		};
-		8893C1171E6678E7000FA043 /* 标题移动 */ = {
-			isa = PBXGroup;
-			children = (
-				8893C1181E667906000FA043 /* MY_TitleMoveLabel.h */,
-				8893C1191E667906000FA043 /* MY_TitleMoveLabel.m */,
-			);
-			path = "标题移动";
-			sourceTree = "<group>";
-		};
-		8893C11B1E66A59F000FA043 /* 改变颜色 */ = {
-			isa = PBXGroup;
-			children = (
-				8893C11C1E66A5C2000FA043 /* MY_ChangeColorLabel.h */,
-				8893C11D1E66A5C2000FA043 /* MY_ChangeColorLabel.m */,
-				8893C11F1E66A8B9000FA043 /* 改变透明度 */,
-			);
-			path = "改变颜色";
-			sourceTree = "<group>";
-		};
-		8893C11F1E66A8B9000FA043 /* 改变透明度 */ = {
-			isa = PBXGroup;
-			children = (
-				8893C1201E66A8CC000FA043 /* MY_AlphaView.h */,
-				8893C1211E66A8CC000FA043 /* MY_AlphaView.m */,
-			);
-			path = "改变透明度";
-			sourceTree = "<group>";
-		};
 		8893C1231E66B274000FA043 /* 风速 */ = {
 			isa = PBXGroup;
 			children = (
 				8893C1241E66B288000FA043 /* MY_WindSpeedView.h */,
 				8893C1251E66B288000FA043 /* MY_WindSpeedView.m */,
-				8893C1271E66B385000FA043 /* 三线视图 */,
-				8893C12B1E66B515000FA043 /* 动画线图 */,
-				8893C1361E66C4F3000FA043 /* 动画引擎 */,
 			);
 			path = "风速";
-			sourceTree = "<group>";
-		};
-		8893C1271E66B385000FA043 /* 三线视图 */ = {
-			isa = PBXGroup;
-			children = (
-				8893C1281E66B39B000FA043 /* MY_ThreeLineView.h */,
-				8893C1291E66B39B000FA043 /* MY_ThreeLineView.m */,
-			);
-			path = "三线视图";
-			sourceTree = "<group>";
-		};
-		8893C12B1E66B515000FA043 /* 动画线图 */ = {
-			isa = PBXGroup;
-			children = (
-				8893C12C1E66B531000FA043 /* MY_AnimatedLineView.h */,
-				8893C12D1E66B531000FA043 /* MY_AnimatedLineView.m */,
-			);
-			path = "动画线图";
 			sourceTree = "<group>";
 		};
 		8893C12F1E66BEC9000FA043 /* 风速 */ = {
@@ -478,15 +405,6 @@
 				8893C1311E66BEF1000FA043 /* MY_CGRectStoreValueModel.m */,
 			);
 			path = "风速";
-			sourceTree = "<group>";
-		};
-		8893C1361E66C4F3000FA043 /* 动画引擎 */ = {
-			isa = PBXGroup;
-			children = (
-				8893C1371E66C50E000FA043 /* MY_WindSpeedCount.h */,
-				8893C1381E66C50E000FA043 /* MY_WindSpeedCount.m */,
-			);
-			path = "动画引擎";
 			sourceTree = "<group>";
 		};
 		88A1429F1E542E0400FC3EAB = {
@@ -638,6 +556,8 @@
 				88A143061E543E7300FC3EAB /* MY_Weather.storyboard */,
 				88A1431B1E54400C00FC3EAB /* MY_WeatherViewController.h */,
 				88A1431C1E54400C00FC3EAB /* MY_WeatherViewController.m */,
+				88ABB5971E76957500F8C04D /* MY_WeekWeatherViewController.h */,
+				88ABB5981E76957500F8C04D /* MY_WeekWeatherViewController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -658,7 +578,6 @@
 				88DB1DF91E654E2C005B80F7 /* MY_WeatherView.h */,
 				88DB1DFA1E654E2C005B80F7 /* MY_WeatherView.m */,
 				88DB1E001E65569E005B80F7 /* 湿度 */,
-				8893C11B1E66A59F000FA043 /* 改变颜色 */,
 				8893C1231E66B274000FA043 /* 风速 */,
 				888529431E70E80500691D40 /* 气温 */,
 				888529441E70E80500691D40 /* 日出 */,
@@ -950,10 +869,6 @@
 			children = (
 				88DB1E011E6556BD005B80F7 /* MY_HumidityView.h */,
 				88DB1E021E6556BD005B80F7 /* MY_HumidityView.m */,
-				88DB1E1B1E656DA0005B80F7 /* MY_HumidityCountLabel.h */,
-				88DB1E1C1E656DA0005B80F7 /* MY_HumidityCountLabel.m */,
-				88DB1E1E1E657360005B80F7 /* 动画引擎 */,
-				8893C1171E6678E7000FA043 /* 标题移动 */,
 			);
 			path = "湿度";
 			sourceTree = "<group>";
@@ -995,17 +910,6 @@
 				88DB1E151E65685B005B80F7 /* YXEasing.m */,
 			);
 			path = YXEasing;
-			sourceTree = "<group>";
-		};
-		88DB1E1E1E657360005B80F7 /* 动画引擎 */ = {
-			isa = PBXGroup;
-			children = (
-				88DB1E1F1E6573BE005B80F7 /* MY_NumberCount.h */,
-				88DB1E201E6573BE005B80F7 /* MY_NumberCount.m */,
-				88DB1E221E65785E005B80F7 /* MY_HumidityCount.h */,
-				88DB1E231E65785E005B80F7 /* MY_HumidityCount.m */,
-			);
-			path = "动画引擎";
 			sourceTree = "<group>";
 		};
 		88F6CB791E5A9FF700B7CB86 /* 二级界面 */ = {
@@ -1249,6 +1153,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				88A142B31E542E0400FC3EAB /* ViewController.m in Sources */,
+				88ABB5991E76957500F8C04D /* MY_WeekWeatherViewController.m in Sources */,
 				88DB1E171E65685B005B80F7 /* YXEasing.m in Sources */,
 				88A1431D1E54400C00FC3EAB /* MY_WeatherViewController.m in Sources */,
 				88A142B01E542E0400FC3EAB /* AppDelegate.m in Sources */,
@@ -1256,7 +1161,6 @@
 				884ADBB51E5AC904006FD5C1 /* MY_VideoStartView.m in Sources */,
 				88DB1DFF1E65554F005B80F7 /* UIView+MY_SetRect.m in Sources */,
 				88F6CB801E5ABBED00B7CB86 /* MY_VideoPlayerView.m in Sources */,
-				8893C1221E66A8CC000FA043 /* MY_AlphaView.m in Sources */,
 				88ACF6971E72953C00D67A17 /* EmitterLayerView.m in Sources */,
 				888529581E70E90B00691D40 /* MY_SunInfoView.m in Sources */,
 				881D58241E6666BD00CC6355 /* NSString+Color.m in Sources */,
@@ -1268,7 +1172,6 @@
 				88DB1E1A1E656AE8005B80F7 /* MY_RotatedAngleView.m in Sources */,
 				88A1431A1E543FEB00FC3EAB /* MY_BaseViewController.m in Sources */,
 				88DB1E161E65685B005B80F7 /* Easing.c in Sources */,
-				8893C1391E66C50E000FA043 /* MY_WindSpeedCount.m in Sources */,
 				88DB1DFB1E654E2C005B80F7 /* MY_WeatherView.m in Sources */,
 				88B4C12B1E55487700E53870 /* MYNetworkingManager.m in Sources */,
 				884ADBB91E5ACBA9006FD5C1 /* MY_VideoImageView.m in Sources */,
@@ -1284,25 +1187,18 @@
 				887810BB1E680C98002B9BB3 /* GCDGroup.m in Sources */,
 				888529631E71080C00691D40 /* MY_WeekWeatherModel.m in Sources */,
 				88A143341E544AB700FC3EAB /* UIColor+MY_Color.m in Sources */,
-				8893C12A1E66B39B000FA043 /* MY_ThreeLineView.m in Sources */,
 				8885295B1E70E92200691D40 /* MY_WeatherInfoView.m in Sources */,
 				88ACF6911E722DB700D67A17 /* MY_LocationManager.m in Sources */,
 				88A143201E54401D00FC3EAB /* MY_VideoViewController.m in Sources */,
 				88ACF6981E72953C00D67A17 /* WeatherNumberMeaningTransform.m in Sources */,
 				88A143381E544F0400FC3EAB /* NSString+MY_NSString.m in Sources */,
-				88DB1E241E65785E005B80F7 /* MY_HumidityCount.m in Sources */,
 				887810BD1E680C98002B9BB3 /* GCDSemaphore.m in Sources */,
 				8893C1261E66B288000FA043 /* MY_WindSpeedView.m in Sources */,
 				88DB1E091E6558CC005B80F7 /* MY_CircleView.m in Sources */,
-				8893C11A1E667906000FA043 /* MY_TitleMoveLabel.m in Sources */,
 				880E869C1E56D462003CB5DC /* MY_VideoTableViewCell.m in Sources */,
-				88DB1E211E6573BE005B80F7 /* MY_NumberCount.m in Sources */,
 				887810BC1E680C98002B9BB3 /* GCDQueue.m in Sources */,
-				88DB1E1D1E656DA0005B80F7 /* MY_HumidityCountLabel.m in Sources */,
 				888529491E70E84C00691D40 /* MY_TemperatureView.m in Sources */,
-				8893C11E1E66A5C2000FA043 /* MY_ChangeColorLabel.m in Sources */,
 				88B4C13A1E557F4D00E53870 /* MY_AdWebViewController.m in Sources */,
-				8893C12E1E66B531000FA043 /* MY_AnimatedLineView.m in Sources */,
 				88ACF69B1E7295E600D67A17 /* UIView+GlowView.m in Sources */,
 				88F6CB7C1E5AA03300B7CB86 /* MY_VideoDetailViewController.m in Sources */,
 				88A143231E54402800FC3EAB /* MY_MainViewController.m in Sources */,

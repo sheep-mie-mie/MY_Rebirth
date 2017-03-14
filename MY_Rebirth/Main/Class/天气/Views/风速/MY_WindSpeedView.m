@@ -45,10 +45,10 @@
     shanView.center =  CGPointMake(MAINSCREEN_WIDTH / 4, MAINSCREEN_WIDTH / 4 );
     [self addSubview:shanView];
     //标题
-    UILabel *windTitleLabel = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, MAINSCREEN_WIDTH / 2 - 20, 40)];
+    UILabel *windTitleLabel = [[UILabel alloc] initWithFrame:CGRectMake(20, 0, MAINSCREEN_WIDTH / 2 - 40, 35)];
     windTitleLabel.text = @"Wind Speed";
     windTitleLabel.font = [UIFont fontWithName:LATO_LIGHT size:AllTitleFont];
-    windTitleLabel.textAlignment = NSTextAlignmentCenter;
+    //windTitleLabel.textAlignment = NSTextAlignmentCenter;
     [self addSubview:windTitleLabel];
     //windTitleLabel.backgroundColor = [UIColor blueColor];
     //棍

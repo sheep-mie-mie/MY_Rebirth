@@ -37,7 +37,7 @@
     UILabel *titleLabel = [[UILabel alloc] init];
     [self addSubview:titleLabel];
     [titleLabel mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.left.mas_equalTo(self.left + 20);
+        make.left.mas_equalTo(self.mas_left).offset(20);
         make.top.mas_equalTo(0);
         make.height.mas_equalTo(35);
         make.width.mas_equalTo(self.width - 40);

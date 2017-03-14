@@ -10,4 +10,22 @@
 
 @interface MY_MaxTempView : UIView
 
+
+
+/**
+ 重写init方法
+
+ @param frame 大小
+ @param heightTem 最高温度
+ @param lowTem 最低温度
+ @return self对象
+ */
+- (instancetype)initWithFrame:(CGRect)frame
+                    HeightTem:(NSString *)heightTem
+                       lowTem:(NSString *)lowTem;
+
+
+
+
+
 @end

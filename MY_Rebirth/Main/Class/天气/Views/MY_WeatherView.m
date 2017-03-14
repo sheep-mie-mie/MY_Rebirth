@@ -8,14 +8,14 @@
 
 #import "MY_WeatherView.h"
 #import "MY_HumidityView.h"
-#import "MY_ChangeColorLabel.h"
 #import "MY_WindSpeedView.h"
 #import "MY_TemperatureView.h"
 #import "MY_SunInfoView.h"
 #import "MY_MaxTempView.h"
 #import "MY_WeatherInfoView.h"
+#import "MY_WeekWeatherViewController.h"
 
-@interface MY_WeatherView ()<UITableViewDelegate>
+@interface MY_WeatherView ()<UITableViewDelegate,UIViewControllerTransitioningDelegate>
 
 /**
  tableView
@@ -82,7 +82,8 @@
         self.windSpeedView = [[MY_WindSpeedView alloc] initWithFrame:CGRectMake(Width / 2.f, Height - Width / 2.f - 64, Width / 2.f, Width / 2.f) windSpeed:1.f];
         [self.myWeatherTableView addSubview:self.windSpeedView];
         //气温差
-        
+        self.maxTempView = [[MY_MaxTempView alloc] initWithFrame:CGRectMake(9, Height - Width / 2.f - 64, Width / 2.f, Width / 2.f) HeightTem:@"16" lowTem:@"8"];
+        [self.myWeatherTableView addSubview:self.maxTempView];
         //阳光
         self.weatherInfoView = [[MY_WeatherInfoView alloc] initWithFrame:CGRectMake(0, Height - 3 * Width / 2 - 64, Width / 2, Width / 2) weatherNumber:800];
         [self.myWeatherTableView addSubview:self.weatherInfoView];
@@ -91,9 +92,21 @@
         [self.myWeatherTableView addSubview:self.sunInfoView];
     }
     //创建出线条
-    
-    
-    
+    UIView *firstLV = [[UIView alloc] initWithFrame:CGRectMake(0, Height - 3 * Width / 2 - 64, MAINSCREEN_WIDTH, 1)];
+    [self.myWeatherTableView addSubview:firstLV];
+    firstLV.backgroundColor = [UIColor lightGrayColor];
+    //线二
+    UIView *secondLV = [[UIView alloc] initWithFrame:CGRectMake(0, Height - Width - 64,  MAINSCREEN_WIDTH, 1)];
+    [self.myWeatherTableView addSubview:secondLV];
+    secondLV.backgroundColor = [UIColor lightGrayColor];
+    //线三
+    UIView *threeLV = [[UIView alloc] initWithFrame:CGRectMake(0, Height - Width / 2.f - 64, MAINSCREEN_WIDTH, 1)];
+    [self.myWeatherTableView addSubview:threeLV];
+    threeLV.backgroundColor = [UIColor lightGrayColor];
+    //线四
+    UIView *fourLV = [[UIView alloc] initWithFrame:CGRectMake(Width / 2, Height - 3 * Width / 2 - 64, 1, MAINSCREEN_WIDTH / 2 * 3)];
+    [self.myWeatherTableView addSubview:fourLV];
+    fourLV.backgroundColor = [UIColor lightGrayColor];
     
 }
 
@@ -114,6 +127,26 @@
 }
 
 
+- (void)scrollViewDidEndDragging:(UIScrollView *)scrollView willDecelerate:(BOOL)decelerate {
+    //位移超过60后执行动画效果
+    if (scrollView.contentOffset.y >= 60) {
+        MY_WeekWeatherViewController *weatherVC = [[MY_WeekWeatherViewController alloc] init];
+        
+        [[MY_GlobalManager currentViewController] presentViewController:weatherVC animated:YES
+                                                             completion:nil];
+    }
+}
+
+//制定转场动画
+- (id<UIViewControllerAnimatedTransitioning>)animationControllerForPresentedController:(UIViewController *)presented presentingController:(UIViewController *)presenting sourceController:(UIViewController *)source {
+    return nil;
+}
+
+
+- (id<UIViewControllerAnimatedTransitioning>)animationControllerForDismissedController:(UIViewController *)dismissed {
+    
+    return nil;
+}
 
 
 
@@ -146,14 +179,5 @@
     }
     return _myWeatherTableView;
 }
-
-
-
-
-
-
-
-
-
 
 @end

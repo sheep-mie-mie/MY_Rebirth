@@ -38,13 +38,13 @@
     UILabel *temperatureTitleLabel = [[UILabel alloc] init];
     [self addSubview:temperatureTitleLabel];
     [temperatureTitleLabel mas_makeConstraints:^(MASConstraintMaker *make) {
-        
-        make.left.top.mas_equalTo(self);
+        make.left.mas_equalTo(self.mas_left).offset(20);
+        make.top.mas_equalTo(self);
         make.width.mas_equalTo(self.width - 40);
         make.height.mas_equalTo(35);
     }];
     temperatureTitleLabel.text = @"Temperature";
-    temperatureTitleLabel.textAlignment = NSTextAlignmentCenter;
+    //temperatureTitleLabel.textAlignment = NSTextAlignmentCenter;
     temperatureTitleLabel.font = [UIFont fontWithName:LATO_LIGHT size:AllTitleFont];
     //温度
     UILabel *temperatureLabel = [[UILabel alloc] initWithFrame:self.bounds];
