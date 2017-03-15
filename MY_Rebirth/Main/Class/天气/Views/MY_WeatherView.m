@@ -45,12 +45,25 @@
  阳光
  */
 @property (nonatomic, strong) MY_WeatherInfoView *weatherInfoView;
-
+/**
+ 数据源
+ */
+@property (nonatomic, strong) MY_WeekWeatherModel *weekWeatherModel;
 
 @end
 
 
 @implementation MY_WeatherView
+
+
+- (instancetype)initWithFrame:(CGRect)frame {
+    if (self = [super initWithFrame:frame]) {
+        
+        
+    }
+    return self;
+}
+
 
 /**
  创建视图
@@ -105,17 +118,17 @@
         self.humidityView = [[MY_HumidityView alloc] initWithFrame:CGRectMake(0, Height - Width - 64, Width / 2.f, Width / 2.f) withHumidity:_weatherModel.main.humidity];
         [self.myWeatherTableView addSubview:self.humidityView];
         //风速
-        self.windSpeedView = [[MY_WindSpeedView alloc] initWithFrame:CGRectMake(Width / 2.f, Height - Width / 2.f - 64, Width / 2.f, Width / 2.f) windSpeed:1.f];
+        self.windSpeedView = [[MY_WindSpeedView alloc] initWithFrame:CGRectMake(Width / 2.f, Height - Width / 2.f - 64, Width / 2.f, Width / 2.f) windSpeed:_weatherModel.wind.speed];
         [self.myWeatherTableView addSubview:self.windSpeedView];
         //气温差
-        self.maxTempView = [[MY_MaxTempView alloc] initWithFrame:CGRectMake(0, Height - Width / 2.f - 64, Width / 2.f, Width / 2.f) HeightTem:@"16" lowTem:@"8"];
+        self.maxTempView = [[MY_MaxTempView alloc] initWithFrame:CGRectMake(0, Height - Width / 2.f - 64, Width / 2.f, Width / 2.f) HeightTem:[NSString stringWithFormat:@"%.f",_weatherModel.main.temp_max - 273.15] lowTem:[NSString stringWithFormat:@"%.f",_weatherModel.main.temp_min - 273.15]];
         [self.myWeatherTableView addSubview:self.maxTempView];
         //阳光
         MY_DetailWeatherInfoModel *weatherInfoModel = _weatherModel.weather[0];
         self.weatherInfoView = [[MY_WeatherInfoView alloc] initWithFrame:CGRectMake(0, Height - 3 * Width / 2 - 64, Width / 2, Width / 2) weatherNumber:weatherInfoModel.weatherId];
         [self.myWeatherTableView addSubview:self.weatherInfoView];
         //日出/落
-        self.sunInfoView = [[MY_SunInfoView alloc] initWithFrame:CGRectMake(Width / 2.f, Height - Width - 64, Width / 2.f, Width / 2.f) withSunSire:@"06:16" sunSet:@"18:01"];
+        self.sunInfoView = [[MY_SunInfoView alloc] initWithFrame:CGRectMake(Width / 2.f, Height - Width - 64, Width / 2.f, Width / 2.f) withSunSire:[self accessUtcSecSecond:_weatherModel.sys.sunrise] sunSet:[self accessUtcSecSecond:_weatherModel.sys.sunset]];
         [self.myWeatherTableView addSubview:self.sunInfoView];
     }
     //创建出线条
@@ -135,7 +148,26 @@
     [self.myWeatherTableView addSubview:fourLV];
     fourLV.backgroundColor = [UIColor lightGrayColor];
     
+    //加载一周天气
+    [self loadWeekWeatherInfoCityId:_weatherModel.cityId];
 }
+
+
+/**
+ 加载一周天气
+ */
+- (void)loadWeekWeatherInfoCityId:(NSInteger)cityId {
+    
+    [MYNetWorkAPI loadWeekWeatherInfoWithCityId:cityId success:^(MY_WeekWeatherModel *result) {
+        if (result.cod == 200) {
+            self.weekWeatherModel = result;
+        }
+    } faulure:^(NSError *error) {
+        
+    } showView:nil];
+    
+}
+
 
 
 - (void)scrollViewDidEndDragging:(UIScrollView *)scrollView willDecelerate:(BOOL)decelerate {
@@ -154,6 +186,10 @@
 }
 
 
+
+
+
+
 - (id<UIViewControllerAnimatedTransitioning>)animationControllerForDismissedController:(UIViewController *)dismissed {
     
     return nil;
@@ -165,17 +201,24 @@
 
 
 
-
-
-
-
-
-
-
-
+/**
+ 计算时间
+ */
+- (NSString *)accessUtcSecSecond:(NSInteger)secondTime {
+    
+    NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
+    dateFormatter.dateFormat = @"HH:mm";
+    NSTimeInterval timeInterval = secondTime;
+    NSDate *sunTime = [NSDate dateWithTimeIntervalSince1970:timeInterval];
+    NSString *sunTimeStr = [dateFormatter stringFromDate:sunTime];
+    
+    return sunTimeStr;
+}
 
 - (void)setWeatherModel:(MY_DetailWeatherModel *)weatherModel {
     _weatherModel = weatherModel;
+    
+    [self my_weatherViewBuildView];
 }
 
 #pragma mark ------------//懒加载\\------------

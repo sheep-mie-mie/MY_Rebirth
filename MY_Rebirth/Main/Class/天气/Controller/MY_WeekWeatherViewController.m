@@ -26,6 +26,29 @@
     [self.view addSubview:self.weekWeatherTableView];
 }
 
+
+/**
+ 加载天气数据
+ */
+- (void)loadWeekWeatherInfo {
+    
+    
+    
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.

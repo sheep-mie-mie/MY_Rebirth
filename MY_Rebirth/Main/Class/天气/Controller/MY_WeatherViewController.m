@@ -26,7 +26,7 @@
  */
 @property (nonatomic, strong) NSMutableArray <MY_DetailWeatherModel *>* dataArray;
 
-@property (nonatomic, strong) MY_DetailWeatherModel *weatherModel;
+//@property (nonatomic, strong) MY_DetailWeatherModel *weatherModel;
 
 @end
 
@@ -60,8 +60,7 @@
  */
 - (void)buildViewState {
     
-    //天气
-    [self.view addSubview:self.myWeatherView];
+    
     //定位
     _locationManager = [MY_LocationManager myLocationManager];
     _locationManager.delegate = self;
@@ -79,13 +78,18 @@
                                               success:^(MY_DetailWeatherModel *result) {
                                                   if (result.cod == 200) {
                                                       [self.dataArray addObject:result];
-                                                      _weatherModel = result;
+                                                      //_weatherModel = result;
                                                       self.myWeatherView.weatherModel = result;
+                                                      
                                                   }
                                               } failure:^(NSError *error) {
                                                   
                                               } showView:nil];
 }
+
+
+
+
 
 - (void)locationManager:(MY_LocationManager *)manager didFailed:(NSError *)error {
     
@@ -96,8 +100,8 @@
 - (void)locationManagerServerClosed:(MY_LocationManager *)manager {
     
     
-    
 }
+
 
 
 
@@ -109,7 +113,7 @@
         _myWeatherView = [[MY_WeatherView alloc] initWithFrame:self.view.bounds];
         _myWeatherView.layer.masksToBounds = YES;
         _myWeatherView.delegate = self;
-        [_myWeatherView my_weatherViewBuildView];
+        [self.view addSubview:_myWeatherView];
     }
     return _myWeatherView;
 }

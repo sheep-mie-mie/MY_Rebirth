@@ -36,6 +36,8 @@
 		8891DFA11E652424005BF149 /* MY_Rebirth in Resources */ = {isa = PBXBuildFile; fileRef = 8891DFA01E652424005BF149 /* MY_Rebirth */; };
 		8893C1261E66B288000FA043 /* MY_WindSpeedView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8893C1251E66B288000FA043 /* MY_WindSpeedView.m */; };
 		8893C1321E66BEF1000FA043 /* MY_CGRectStoreValueModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 8893C1311E66BEF1000FA043 /* MY_CGRectStoreValueModel.m */; };
+		889A31B91E78D6D200B2B40F /* MY_WeekWeatherCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 889A31B71E78D6D200B2B40F /* MY_WeekWeatherCell.m */; };
+		889A31BA1E78D6D200B2B40F /* MY_WeekWeatherCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 889A31B81E78D6D200B2B40F /* MY_WeekWeatherCell.xib */; };
 		88A142AD1E542E0400FC3EAB /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 88A142AC1E542E0400FC3EAB /* main.m */; };
 		88A142B01E542E0400FC3EAB /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 88A142AF1E542E0400FC3EAB /* AppDelegate.m */; };
 		88A142B31E542E0400FC3EAB /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 88A142B21E542E0400FC3EAB /* ViewController.m */; };
@@ -149,6 +151,9 @@
 		8893C1251E66B288000FA043 /* MY_WindSpeedView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MY_WindSpeedView.m; sourceTree = "<group>"; };
 		8893C1301E66BEF1000FA043 /* MY_CGRectStoreValueModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MY_CGRectStoreValueModel.h; sourceTree = "<group>"; };
 		8893C1311E66BEF1000FA043 /* MY_CGRectStoreValueModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MY_CGRectStoreValueModel.m; sourceTree = "<group>"; };
+		889A31B61E78D6D200B2B40F /* MY_WeekWeatherCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MY_WeekWeatherCell.h; sourceTree = "<group>"; };
+		889A31B71E78D6D200B2B40F /* MY_WeekWeatherCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MY_WeekWeatherCell.m; sourceTree = "<group>"; };
+		889A31B81E78D6D200B2B40F /* MY_WeekWeatherCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MY_WeekWeatherCell.xib; sourceTree = "<group>"; };
 		88A142A81E542E0400FC3EAB /* MY_Rebirth.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MY_Rebirth.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		88A142AC1E542E0400FC3EAB /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		88A142AE1E542E0400FC3EAB /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -577,6 +582,9 @@
 			children = (
 				88DB1DF91E654E2C005B80F7 /* MY_WeatherView.h */,
 				88DB1DFA1E654E2C005B80F7 /* MY_WeatherView.m */,
+				889A31B61E78D6D200B2B40F /* MY_WeekWeatherCell.h */,
+				889A31B71E78D6D200B2B40F /* MY_WeekWeatherCell.m */,
+				889A31B81E78D6D200B2B40F /* MY_WeekWeatherCell.xib */,
 				88DB1E001E65569E005B80F7 /* 湿度 */,
 				8893C1231E66B274000FA043 /* 风速 */,
 				888529431E70E80500691D40 /* 气温 */,
@@ -1071,6 +1079,7 @@
 				88A143111E543EE400FC3EAB /* MY_Main.storyboard in Resources */,
 				881D581A1E6655BB00CC6355 /* Lato-Light.ttf in Resources */,
 				88A1430C1E543EC700FC3EAB /* MY_Video.storyboard in Resources */,
+				889A31BA1E78D6D200B2B40F /* MY_WeekWeatherCell.xib in Resources */,
 				880E869D1E56D462003CB5DC /* MY_VideoTableViewCell.xib in Resources */,
 				881D58171E6655BB00CC6355 /* Lato-Regular.ttf in Resources */,
 				881D581C1E6655BB00CC6355 /* Weather&Time.ttf in Resources */,
@@ -1196,6 +1205,7 @@
 				8893C1261E66B288000FA043 /* MY_WindSpeedView.m in Sources */,
 				88DB1E091E6558CC005B80F7 /* MY_CircleView.m in Sources */,
 				880E869C1E56D462003CB5DC /* MY_VideoTableViewCell.m in Sources */,
+				889A31B91E78D6D200B2B40F /* MY_WeekWeatherCell.m in Sources */,
 				887810BC1E680C98002B9BB3 /* GCDQueue.m in Sources */,
 				888529491E70E84C00691D40 /* MY_TemperatureView.m in Sources */,
 				88B4C13A1E557F4D00E53870 /* MY_AdWebViewController.m in Sources */,
