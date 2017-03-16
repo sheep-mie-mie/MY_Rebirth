@@ -32,11 +32,19 @@ PODS:
   - Masonry (1.0.2)
   - MBProgressHUD (0.9.2)
   - MJExtension (3.0.13)
+  - MOBFoundation (2.2.10)
   - pop (1.0.9)
   - Reachability (3.2)
   - SDWebImage (3.8.2):
     - SDWebImage/Core (= 3.8.2)
   - SDWebImage/Core (3.8.2)
+  - ShareSDK3 (3.5.2):
+    - ShareSDK3/ShareSDK (= 3.5.2)
+  - ShareSDK3/ShareSDK (3.5.2)
+  - ShareSDK3/ShareSDKPlatforms/QQ (3.5.2)
+  - ShareSDK3/ShareSDKPlatforms/SinaWeibo (3.5.2)
+  - ShareSDK3/ShareSDKPlatforms/WeChat (3.5.2)
+  - ShareSDK3/ShareSDKUI (3.5.2)
   - Wonderful (1.2.0)
   - ZFDownload (1.0.2):
     - ASIHTTPRequest
@@ -50,8 +58,14 @@ DEPENDENCIES:
   - Masonry
   - MBProgressHUD (~> 0.9.2)
   - MJExtension
+  - MOBFoundation
   - pop
   - SDWebImage
+  - ShareSDK3
+  - ShareSDK3/ShareSDKPlatforms/QQ
+  - ShareSDK3/ShareSDKPlatforms/SinaWeibo
+  - ShareSDK3/ShareSDKPlatforms/WeChat
+  - ShareSDK3/ShareSDKUI
   - Wonderful
   - ZFDownload
   - ZFPlayer
@@ -64,13 +78,15 @@ SPEC CHECKSUMS:
   Masonry: 7c429b56da9d4ee0bbb3ed77a5ea710d6a5df39e
   MBProgressHUD: 1569cf7ace17a8bac47aabfbb8580a49690386d1
   MJExtension: 5932755f451458eefa24239358817f8d291240c7
+  MOBFoundation: 3cca6f267be8ea7643be0d27ec871b66b64e32fd
   pop: f667631a5108a2e60d9e8797c9b32ddaf2080bce
   Reachability: 33e18b67625424e47b6cde6d202dce689ad7af96
   SDWebImage: 098e97e6176540799c27e804c96653ee0833d13c
+  ShareSDK3: 08ed714e2bbdcd97ab60f58cb398227341dfc20a
   Wonderful: 8f8737eb8d2c32264110e91659095cb5c8bff223
   ZFDownload: a52f94ebb080833b8a8ceb19a409f2941343fe7f
   ZFPlayer: c36657da33c28c75dfb100e98e7976b5b3e1fc10
 
-PODFILE CHECKSUM: aea2eb2b1eb45c160019f576f7099aa6b7f00ab9
+PODFILE CHECKSUM: 5a0fc0fe1bf5d5d92a7dd438156587d1e9009846
 
 COCOAPODS: 1.1.1

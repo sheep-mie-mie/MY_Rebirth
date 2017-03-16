@@ -7,6 +7,7 @@
 //
 
 #import "MY_WeekWeatherViewController.h"
+#import "MY_WeekWeatherCell.h"
 
 @interface MY_WeekWeatherViewController ()<UITableViewDelegate,UITableViewDataSource,UIViewControllerTransitioningDelegate>
 
@@ -21,9 +22,23 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
     
     [self.view addSubview:self.weekWeatherTableView];
+    UIImageView *imageVIiew = [[UIImageView alloc] initWithFrame:self.view.bounds];
+    imageVIiew.image = [UIImage imageNamed:@"backImage"];
+    imageVIiew.contentMode = UIViewContentModeScaleAspectFill;
+    [self.view addSubview:imageVIiew];
+    
+    UILabel *loadTextLabel = [[UILabel alloc] init];
+    [self.view addSubview:loadTextLabel];
+    [loadTextLabel mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.bottom.right.left.mas_equalTo(imageVIiew);
+        make.height.mas_equalTo(60);
+    }];
+    loadTextLabel.text = @"更多功能 敬请期待";
+    loadTextLabel.font = [UIFont fontWithName:LATO_LIGHT size:40];
+    loadTextLabel.textAlignment = NSTextAlignmentCenter;
+    loadTextLabel.textColor = [UIColor goldColor];
 }
 
 
@@ -39,13 +54,19 @@
 
 
 
-
-
-
-
-
-
-
+#pragma mark ------------//delegate\\------------
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+    return [self.weekWeatherModel.list count];
+}
+- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
+    return 1;
+}
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+    MY_WeekWeatherCell *cell = [tableView dequeueReusableCellWithIdentifier:@"MY_WeekWeatherCell" forIndexPath:indexPath];
+    cell.model = self.weekWeatherModel.list[indexPath.row];
+    
+    return cell;
+}
 
 
 
@@ -53,9 +74,6 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
-
-
-
 
 
 
@@ -74,14 +92,17 @@
     if (_weekWeatherTableView == nil) {
         _weekWeatherTableView = [[UITableView alloc] initWithFrame:self.view.bounds style:UITableViewStylePlain];
         _weekWeatherTableView.delegate = self;
-        //_weekWeatherTableView.dataSource = self;
+        _weekWeatherTableView.dataSource = self;
+        [_weekWeatherTableView registerNib:[UINib nibWithNibName:@"MY_WeekWeatherCell" bundle:nil] forCellReuseIdentifier:@"MY_WeekWeatherCell"];
     }
     return _weekWeatherTableView;
 }
 
 
 
-
+- (void)setWeekWeatherModel:(MY_WeekWeatherModel *)weekWeatherModel {
+    _weekWeatherModel = weekWeatherModel;
+}
 
 
 

@@ -10,4 +10,11 @@
 
 @interface MY_WeekWeatherViewController : UIViewController
 
+
+/**
+ 数据源
+ */
+@property (nonatomic, strong) MY_WeekWeatherModel *weekWeatherModel;
+
+
 @end

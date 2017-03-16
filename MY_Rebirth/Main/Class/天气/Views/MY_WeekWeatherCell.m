@@ -20,9 +20,20 @@
 
 @implementation MY_WeekWeatherCell
 
+- (void)setModel:(MY_WeekWeatherListModel *)model {
+    
+    MY_WeekWeatherListWeatherModel *weatherModel = model.weather[0];
+    _weatherLabel.text = weatherModel.weatherdescription;
+    _weatherLabel.font = [UIFont fontWithName:LATO_LIGHT size:10];
+    
+    
+}
+
+
+
+
 - (void)awakeFromNib {
     [super awakeFromNib];
-    
     
 }
 

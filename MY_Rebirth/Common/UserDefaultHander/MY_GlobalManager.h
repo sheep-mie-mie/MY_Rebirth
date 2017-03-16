@@ -11,9 +11,12 @@
 #pragma mark ------------//网络运行环境\\------------
 //static NSString * const baseUrl = @"http://baobab.wandoujia.com/api/v1/feed?num=10&date=%@&vc=67&u=011f2924aa2cf27aa5dc8066c041fe08116a9a0c&v=1.8.0&f=iphone";
 //开眼
-static NSString * const operEyesUrl = @"http://baobab.wandoujia.com/";
+static NSString * const operEyesUrl    = @"http://baobab.wandoujia.com/";
 //天气
 static NSString * const weatherInfoUrl = @"http://api.openweathermap.org/";
+//分享
+static NSString * const shareAppKey    = @"1c212be888809";
+
 
 
 #pragma mark ------------//第三方Appkey\\------------

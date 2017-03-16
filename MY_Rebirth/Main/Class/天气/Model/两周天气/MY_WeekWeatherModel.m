@@ -35,6 +35,10 @@
 @end
 
 @implementation MY_WeekWeatherListWeatherModel
++ (NSDictionary *)mj_replacedKeyFromPropertyName {
+    return @{@"weatherId":@"id",
+             @"weatherDescription":@"description"};
+}
 @end
 
 

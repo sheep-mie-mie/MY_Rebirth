@@ -10,4 +10,6 @@
 
 @interface MY_WeekWeatherCell : UITableViewCell
 
+@property (nonatomic, strong) MY_WeekWeatherListModel *model;
+
 @end

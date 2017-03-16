@@ -50,9 +50,9 @@
 @end
 
 @interface MY_WeekWeatherListWeatherModel : NSObject
-@property (nonatomic, assign) NSInteger id;
+@property (nonatomic, assign) NSInteger weatherId;
 @property (nonatomic, copy  ) NSString *main;
-@property (nonatomic, copy  ) NSString *description;
+@property (nonatomic, copy  ) NSString *weatherdescription;
 @property (nonatomic, copy  ) NSString *icon;
 @end
 

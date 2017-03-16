@@ -103,7 +103,12 @@
 
 - (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section {
     UILabel *titleHeaderLabel = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, MAINSCREEN_WIDTH, 30)];
-    titleHeaderLabel.text = @"Firday 02.17";
+    
+    NSDate *nowDate = [NSDate date];
+    NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
+    formatter.dateFormat = @"MM.dd";
+    NSString *dateStr = [formatter stringFromDate:nowDate];
+    titleHeaderLabel.text = dateStr;
     titleHeaderLabel.textAlignment = NSTextAlignmentCenter;
     titleHeaderLabel.backgroundColor = [UIColor grayColor];
     return titleHeaderLabel;

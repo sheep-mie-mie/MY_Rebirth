@@ -174,7 +174,7 @@
     //位移超过60后执行动画效果
     if (scrollView.contentOffset.y >= 60) {
         MY_WeekWeatherViewController *weatherVC = [[MY_WeekWeatherViewController alloc] init];
-        
+        weatherVC.weekWeatherModel = self.weekWeatherModel;
         [[MY_GlobalManager currentViewController] presentViewController:weatherVC animated:YES
                                                              completion:nil];
     }

@@ -24,6 +24,13 @@ pod 'ZFDownload'
 pod 'ZFPlayer'
 #动画
 pod 'pop'
+#分享
+pod 'ShareSDK3'
+pod 'MOBFoundation'
+pod 'ShareSDK3/ShareSDKUI'
+pod 'ShareSDK3/ShareSDKPlatforms/QQ'
+pod 'ShareSDK3/ShareSDKPlatforms/SinaWeibo'
+pod 'ShareSDK3/ShareSDKPlatforms/WeChat'
 
 
 end
